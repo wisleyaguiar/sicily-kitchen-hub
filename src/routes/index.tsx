@@ -122,6 +122,48 @@ function Index() {
         </div>
       </section>
 
+      {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
+      <section className="py-24 px-5 bg-background">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.1fr] gap-12 items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-secondary rounded-[2rem] -rotate-2" />
+            <div className="relative bg-[var(--brand-cream)] border-4 border-foreground rounded-[2rem] p-10 flex items-center justify-center">
+              <img src={basilProduct.url} alt="CIAO! premium Sicilian EVOO bottle" className="h-[420px] object-contain animate-float" />
+            </div>
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">
+              🔒 Premium · Real Origin · Everyday Use
+            </span>
+            <h2 className="mt-4 text-4xl md:text-5xl uppercase leading-[0.95]">
+              More than a regular<br/>grocery store olive oil.
+            </h2>
+            <p className="mt-5 text-lg text-muted-foreground">
+              CIAO! combines quality, aesthetics and practicality — a product designed to live on your counter and elevate every meal.
+            </p>
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2.5">
+              {[
+                "Sicilian extra virgin olive oil",
+                "Organic product",
+                "Kosher certification",
+                "Zero blend",
+                "Cold pressed",
+                "Bold flavor for cooking & finishing",
+                "Practical squeeze bottle",
+                "Modern design",
+                "Cooking, finishing, infused & gift",
+              ].map(x=>(
+                <li key={x} className="flex gap-2 text-sm"><span className="text-secondary font-black">✓</span>{x}</li>
+              ))}
+            </ul>
+            <p className="mt-6 font-display text-2xl text-primary">Use better olive oil every day.</p>
+            <a href="#shop" className="inline-block mt-6 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-[var(--brand-red-dark)] transition">
+              Choose my CIAO! now
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* TRUTH ABOUT OLIVE OIL */}
       <section className="py-24 px-5 bg-foreground text-background">
         <div className="max-w-6xl mx-auto">
