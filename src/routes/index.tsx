@@ -6,6 +6,7 @@ import truffleFlavor from "@/assets/Truffle_Flavor.asset.json";
 import chiliContext from "@/assets/Chili_Context.asset.json";
 import rosemaryContext from "@/assets/Rosemary_Context.asset.json";
 import finishing from "@/assets/500_FINISHING_AF_BG_ZERO.asset.json";
+import ciaoLogo from "@/assets/ciao-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,7 +30,9 @@ function Index() {
       <header className="sticky top-0 z-50 bg-background/85 backdrop-blur border-b border-border">
         <div className="h-2 checker-band" />
         <div className="max-w-7xl mx-auto flex items-center justify-between px-5 py-3">
-          <a href="#" className="text-4xl ciao-script leading-none">Ciao!</a>
+          <a href="#" className="block leading-none">
+            <img src={ciaoLogo.url} alt="CIAO! Sicily" className="h-10 md:h-12 w-auto" />
+          </a>
           <nav className="hidden md:flex gap-8 text-sm font-semibold uppercase tracking-wider">
             <a href="#why" className="hover:text-primary">Why CIAO!</a>
             <a href="#cooking" className="hover:text-primary">Cooking + Finishing</a>
@@ -509,7 +512,7 @@ function Index() {
         <div className="h-2 checker-band -mx-5 mb-12" />
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
           <div>
-            <div className="text-5xl ciao-script">Ciao!</div>
+            <img src={ciaoLogo.url} alt="CIAO! Sicily" className="h-16 w-auto rounded-md" />
             <p className="mt-3 text-sm text-background/70">Real Sicilian Extra Virgin Olive Oil. Bringing taste and joy to your food.</p>
             <p className="mt-4 text-xs uppercase tracking-widest text-background/50">www.ciao-sicily.com</p>
           </div>
