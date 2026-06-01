@@ -98,7 +98,6 @@ function Index() {
         </div>
       </section>
 
-      <div className="h-3 checker-band" />
 
       {/* WHY CIAO */}
       <section id="why" className="py-24 px-5 bg-[var(--brand-cream)]">
@@ -123,6 +122,8 @@ function Index() {
           </a>
         </div>
       </section>
+
+      <div className="h-6 checker-band" />
 
       {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
       <section className="py-24 px-5 bg-background">
@@ -166,6 +167,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* TRUTH ABOUT OLIVE OIL */}
       <section className="py-24 px-5 bg-foreground text-background">
         <div className="max-w-6xl mx-auto">
@@ -191,6 +194,8 @@ function Index() {
           </p>
         </div>
       </section>
+
+      <div className="h-6 checker-band" />
 
       {/* VALUE PROPOSITION */}
       <section className="py-24 px-5 bg-background">
@@ -231,6 +236,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* COOKING + FINISHING */}
       <section id="cooking" className="py-24 px-5">
         <div className="max-w-6xl mx-auto">
@@ -266,6 +273,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* INFUSED OILS */}
       <section id="infused" className="py-24 px-5 bg-[var(--brand-cream)]">
         <div className="max-w-6xl mx-auto">
@@ -300,6 +309,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* LESS DRESS MORE DRIZZLE */}
       <section className="py-24 px-5 bg-secondary text-secondary-foreground relative overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -331,6 +342,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <div className="h-6 checker-band" />
 
       {/* THE PROOF IS IN THE FLAVOR */}
       <section className="py-24 px-5 bg-background">
@@ -368,6 +381,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* WHO IS CIAO FOR — standalone */}
       <section className="py-24 px-5 bg-[var(--brand-cream)]">
         <div className="max-w-5xl mx-auto text-center">
@@ -391,6 +406,8 @@ function Index() {
           </a>
         </div>
       </section>
+
+      <div className="h-6 checker-band" />
 
       {/* WHY NOT ANOTHER + WHO IS IT FOR */}
       <section className="py-24 px-5">
@@ -417,6 +434,8 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <div className="h-6 checker-band" />
 
       {/* SHOP */}
       <section id="shop" className="py-24 px-5 bg-foreground text-background">
@@ -458,6 +477,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* FAQ */}
       <section id="faq" className="py-24 px-5 bg-[var(--brand-cream)]">
         <div className="max-w-3xl mx-auto">
@@ -489,6 +510,8 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
+
       {/* FINAL CTA */}
       <section className="py-28 px-5 bg-primary text-primary-foreground text-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_50%,_white,_transparent_40%),radial-gradient(circle_at_70%_60%,_oklch(0.52_0.18_148),_transparent_45%)]" />
@@ -505,6 +528,8 @@ function Index() {
           </a>
         </div>
       </section>
+
+      <div className="h-6 checker-band" />
 
       {/* FOOTER */}
       <footer className="bg-foreground text-background pt-16 pb-8 px-5">
