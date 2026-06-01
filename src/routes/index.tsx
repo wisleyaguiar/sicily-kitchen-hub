@@ -93,23 +93,33 @@ function Index() {
               className="w-full h-auto block"
             />
 
-            {/* Green starburst seal — brush "SAVE" + 15% OFF */}
-            <div className="absolute -top-6 -right-4 md:-top-10 md:-right-10 z-10 w-40 h-40 md:w-52 md:h-52 rotate-[-10deg] drop-shadow-[0_14px_24px_rgba(0,0,0,0.25)] animate-float">
-              <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full" aria-hidden>
-                <defs>
-                  <path id="starburst" d="M100 0 L112 14 L130 6 L136 25 L156 22 L156 42 L174 46 L168 65 L185 76 L172 91 L184 108 L168 118 L176 137 L156 140 L158 160 L138 158 L134 178 L116 170 L106 188 L92 174 L78 188 L70 170 L52 178 L46 158 L26 160 L28 140 L8 137 L16 118 L0 108 L12 91 L-1 76 L16 65 L10 46 L28 42 L28 22 L48 25 L54 6 L72 14 Z" />
-                </defs>
-                {/* outer ring (darker green) */}
-                <use href="#starburst" fill="var(--brand-green-dark)" transform="translate(100 100) scale(1.04) translate(-100 -100)" />
-                {/* cream offset gap */}
-                <use href="#starburst" fill="var(--brand-cream)" transform="translate(100 100) scale(0.98) translate(-100 -100)" />
-                {/* main green fill */}
-                <use href="#starburst" fill="var(--brand-green)" transform="translate(100 100) scale(0.9) translate(-100 -100)" />
+            {/* Green starburst seal — authentic zigzag, centered text */}
+            <div className="absolute -top-6 -right-4 md:-top-10 md:-right-10 z-10 w-40 h-40 md:w-52 md:h-52 rotate-[-8deg] drop-shadow-[0_14px_24px_rgba(0,0,0,0.25)] animate-float">
+              <svg viewBox="-110 -110 220 220" className="absolute inset-0 w-full h-full" aria-hidden>
+                {(() => {
+                  const points = 24;
+                  const make = (rOuter: number, rInner: number) => {
+                    const pts: string[] = [];
+                    for (let i = 0; i < points * 2; i++) {
+                      const r = i % 2 === 0 ? rOuter : rInner;
+                      const a = (Math.PI / points) * i - Math.PI / 2;
+                      pts.push(`${(Math.cos(a) * r).toFixed(2)},${(Math.sin(a) * r).toFixed(2)}`);
+                    }
+                    return pts.join(" ");
+                  };
+                  return (
+                    <>
+                      <polygon points={make(100, 82)} fill="var(--brand-green-dark)" />
+                      <polygon points={make(94, 76)} fill="var(--brand-cream)" />
+                      <polygon points={make(86, 70)} fill="var(--brand-green)" />
+                    </>
+                  );
+                })()}
               </svg>
-              <div className="relative h-full w-full flex flex-col items-center justify-center text-[var(--brand-cream)] leading-none text-center px-4">
-                <span className="ciao-script text-[26px] md:text-[34px] -rotate-3">save</span>
-                <span className="font-display text-[44px] md:text-[58px] tracking-tight mt-1">15%</span>
-                <span className="font-display text-base md:text-xl tracking-[0.3em]">OFF</span>
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-[var(--brand-cream)] leading-none text-center">
+                <span className="ciao-script text-2xl md:text-3xl -rotate-3">save</span>
+                <span className="font-display text-[40px] md:text-[54px] tracking-tight mt-1">15%</span>
+                <span className="font-display text-sm md:text-lg tracking-[0.3em] mt-1">OFF</span>
               </div>
             </div>
           </div>
