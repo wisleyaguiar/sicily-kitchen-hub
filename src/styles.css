@@ -115,9 +115,11 @@
   --color-brand-green-dark: var(--brand-green-dark);
   --color-brand-cream: var(--brand-cream);
   --color-brand-ink: var(--brand-ink);
-  --font-display: "Bebas Neue", "Archivo Black", system-ui, sans-serif;
-  --font-script: "Caveat", cursive;
-  --font-body: "Inter", system-ui, sans-serif;
+  /* Futura Black surrogate (free Google equivalent: Archivo Black) */
+  --font-display: "Archivo Black", "Futura", "Jost", system-ui, sans-serif;
+  /* Chemical Memory surrogate (brush/marker): Permanent Marker */
+  --font-script: "Permanent Marker", "Caveat Brush", cursive;
+  --font-body: "Jost", "Futura", "Inter", system-ui, sans-serif;
 }
 
 .dark {
