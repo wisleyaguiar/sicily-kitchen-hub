@@ -200,5 +200,3 @@
   50% { transform: translateY(-12px); }
 }
 .animate-float { animation: float-slow 5s ease-in-out infinite; }
-  }
-}
