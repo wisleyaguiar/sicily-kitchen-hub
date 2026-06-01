@@ -86,12 +86,28 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-6 bg-gradient-to-br from-primary to-secondary rounded-[2.5rem] rotate-2 opacity-90" />
-            <div className="relative bg-[var(--brand-cream)] rounded-[2rem] overflow-hidden shadow-[var(--shadow-card)] border-4 border-foreground">
-              <img src={kitchenSet.url} alt="CIAO! Kitchen Set — Cooking and Finishing Extra Virgin Olive Oil on the table" className="w-full h-auto block" />
-              <div className="absolute -top-4 -right-4 bg-secondary text-secondary-foreground rounded-full w-24 h-24 flex flex-col items-center justify-center font-display text-center rotate-12 shadow-lg z-10">
-                <span className="text-3xl leading-none">15%</span>
-                <span className="text-[10px] uppercase tracking-wider">OFF</span>
+            {/* Product image — clean, brand-aligned: cream backdrop + red checker strips top & bottom, no colored frame */}
+            <div className="relative bg-[var(--brand-cream)] overflow-hidden shadow-[var(--shadow-card)]">
+              <div className="h-5 checker-band" />
+              <img
+                src={kitchenSet.url}
+                alt="CIAO! Kitchen Set — Cooking and Finishing Extra Virgin Olive Oil on the table"
+                className="w-full h-auto block"
+              />
+              <div className="h-5 checker-band" />
+            </div>
+
+            {/* Bold brand stamp — splatter red disc + brush headline */}
+            <div className="absolute -top-8 -right-6 md:-top-10 md:-right-10 z-10 rotate-[-8deg] drop-shadow-[0_14px_24px_rgba(0,0,0,0.25)]">
+              <div className="relative w-36 h-36 md:w-44 md:h-44 flex items-center justify-center">
+                <span aria-hidden className="absolute inset-0 rounded-full bg-primary" style={{ clipPath: "polygon(50% 0%,62% 8%,75% 3%,82% 14%,95% 18%,93% 32%,100% 45%,92% 58%,98% 72%,84% 78%,80% 92%,66% 88%,52% 100%,40% 90%,26% 96%,20% 82%,5% 78%,9% 64%,0% 50%,8% 38%,3% 24%,18% 20%,22% 6%,38% 10%)" }} />
+                <span aria-hidden className="absolute inset-2 rounded-full border-2 border-dashed border-[var(--brand-cream)]/70" />
+                <div className="relative text-center text-primary-foreground leading-none">
+                  <div className="ciao-script text-[28px] md:text-[34px] -rotate-2">save</div>
+                  <div className="font-display text-5xl md:text-6xl tracking-tight">15%</div>
+                  <div className="font-display text-base md:text-lg tracking-[0.25em] mt-1">OFF</div>
+                  <div className="text-[10px] md:text-[11px] uppercase tracking-widest opacity-90 mt-1">first order</div>
+                </div>
               </div>
             </div>
           </div>
