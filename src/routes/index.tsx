@@ -86,28 +86,30 @@ function Index() {
           </div>
 
           <div className="relative">
-            {/* Product image — clean, brand-aligned: cream backdrop + red checker strips top & bottom, no colored frame */}
-            <div className="relative bg-[var(--brand-cream)] overflow-hidden shadow-[var(--shadow-card)]">
-              <div className="h-5 checker-band" />
-              <img
-                src={kitchenSet.url}
-                alt="CIAO! Kitchen Set — Cooking and Finishing Extra Virgin Olive Oil on the table"
-                className="w-full h-auto block"
-              />
-              <div className="h-5 checker-band" />
-            </div>
+            {/* Product image — clean, no frames */}
+            <img
+              src={kitchenSet.url}
+              alt="CIAO! Kitchen Set — Cooking and Finishing Extra Virgin Olive Oil on the table"
+              className="w-full h-auto block"
+            />
 
-            {/* Bold brand stamp — splatter red disc + brush headline */}
-            <div className="absolute -top-8 -right-6 md:-top-10 md:-right-10 z-10 rotate-[-8deg] drop-shadow-[0_14px_24px_rgba(0,0,0,0.25)]">
-              <div className="relative w-36 h-36 md:w-44 md:h-44 flex items-center justify-center">
-                <span aria-hidden className="absolute inset-0 rounded-full bg-primary" style={{ clipPath: "polygon(50% 0%,62% 8%,75% 3%,82% 14%,95% 18%,93% 32%,100% 45%,92% 58%,98% 72%,84% 78%,80% 92%,66% 88%,52% 100%,40% 90%,26% 96%,20% 82%,5% 78%,9% 64%,0% 50%,8% 38%,3% 24%,18% 20%,22% 6%,38% 10%)" }} />
-                <span aria-hidden className="absolute inset-2 rounded-full border-2 border-dashed border-[var(--brand-cream)]/70" />
-                <div className="relative text-center text-primary-foreground leading-none">
-                  <div className="ciao-script text-[28px] md:text-[34px] -rotate-2">save</div>
-                  <div className="font-display text-5xl md:text-6xl tracking-tight">15%</div>
-                  <div className="font-display text-base md:text-lg tracking-[0.25em] mt-1">OFF</div>
-                  <div className="text-[10px] md:text-[11px] uppercase tracking-widest opacity-90 mt-1">first order</div>
-                </div>
+            {/* Green starburst seal — brush "SAVE" + 15% OFF */}
+            <div className="absolute -top-6 -right-4 md:-top-10 md:-right-10 z-10 w-40 h-40 md:w-52 md:h-52 rotate-[-10deg] drop-shadow-[0_14px_24px_rgba(0,0,0,0.25)] animate-float">
+              <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full" aria-hidden>
+                <defs>
+                  <path id="starburst" d="M100 0 L112 14 L130 6 L136 25 L156 22 L156 42 L174 46 L168 65 L185 76 L172 91 L184 108 L168 118 L176 137 L156 140 L158 160 L138 158 L134 178 L116 170 L106 188 L92 174 L78 188 L70 170 L52 178 L46 158 L26 160 L28 140 L8 137 L16 118 L0 108 L12 91 L-1 76 L16 65 L10 46 L28 42 L28 22 L48 25 L54 6 L72 14 Z" />
+                </defs>
+                {/* outer ring (darker green) */}
+                <use href="#starburst" fill="var(--brand-green-dark)" transform="translate(100 100) scale(1.04) translate(-100 -100)" />
+                {/* cream offset gap */}
+                <use href="#starburst" fill="var(--brand-cream)" transform="translate(100 100) scale(0.98) translate(-100 -100)" />
+                {/* main green fill */}
+                <use href="#starburst" fill="var(--brand-green)" transform="translate(100 100) scale(0.9) translate(-100 -100)" />
+              </svg>
+              <div className="relative h-full w-full flex flex-col items-center justify-center text-[var(--brand-cream)] leading-none text-center px-4">
+                <span className="ciao-script text-[26px] md:text-[34px] -rotate-3">save</span>
+                <span className="font-display text-[44px] md:text-[58px] tracking-tight mt-1">15%</span>
+                <span className="font-display text-base md:text-xl tracking-[0.3em]">OFF</span>
               </div>
             </div>
           </div>
