@@ -182,7 +182,7 @@ function Index() {
             <p className="mt-5 text-lg text-muted-foreground">
               CIAO! combines quality, aesthetics and practicality — a product designed to live on your counter and elevate every meal.
             </p>
-            <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2.5">
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-2.5 font-[var(--font-mono)]">
               {[
                 "Sicilian extra virgin olive oil",
                 "Organic product",
