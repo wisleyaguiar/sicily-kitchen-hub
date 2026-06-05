@@ -503,15 +503,15 @@ function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Kitchen Set", desc: "Cooking + Finishing. The full experience.", img: finishing.url, badge: "Best Seller", price: "$42" },
-              { title: "Finishing EVOO", desc: "The final drizzle for any dish.", img: finishing.url, badge: "Squeeze", price: "$24" },
-              { title: "Cooking EVOO", desc: "Premium everyday extra virgin.", img: basilProduct.url, badge: "Everyday", price: "$22" },
-              { title: "Infused — Truffle", desc: "Rich, indulgent, gourmet.", img: truffleFlavor.url, badge: "Gourmet", price: "$28" },
-              { title: "Infused — Basil", desc: "Fresh Italian basil EVOO.", img: basilProduct.url, badge: "Fresh", price: "$24" },
-              { title: "Gift Pack", desc: "Flavor, design & Italy — wrapped.", img: rosemaryContext.url, badge: "Gift", price: "$58" },
+              { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: finishingFlat.url, badge: "Best Seller", price: "$37.99" },
+              { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat.url, badge: "Squeeze", price: "$22.99" },
+              { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat.url, badge: "Everyday", price: "$17.99" },
+              { title: "Infused — Truffle", size: "250ml · 8.45 fl oz", desc: "Rich, indulgent, gourmet.", img: truffleFlat.url, badge: "Gourmet", price: "$12.99" },
+              { title: "Infused — Basil", size: "250ml · 8.45 fl oz", desc: "Fresh Italian basil EVOO.", img: basilFlat.url, badge: "Fresh", price: "$12.99" },
+              { title: "Infused — Chili", size: "250ml · 8.45 fl oz", desc: "A bold Sicilian kick.", img: chiliFlat.url, badge: "Spicy", price: "$12.99" },
             ].map(p=>(
               <article key={p.title} className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
-                <div className="aspect-square bg-[var(--brand-cream)] flex items-center justify-center overflow-hidden relative">
+                <div className="aspect-square bg-white flex items-center justify-center overflow-hidden relative">
                   <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">{p.badge}</span>
                   <img src={p.img} alt={p.title} className="h-full w-full object-contain p-6 group-hover:scale-105 transition" />
                 </div>
@@ -520,7 +520,8 @@ function Index() {
                     <h3 className="text-xl uppercase">{p.title}</h3>
                     <span className="text-primary font-bold">{p.price}</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-1">{p.desc}</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-[var(--font-mono)]">{p.size}</p>
+                  <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
                   <button className="mt-4 w-full bg-foreground text-background py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-primary transition">
                     Add to cart
                   </button>
