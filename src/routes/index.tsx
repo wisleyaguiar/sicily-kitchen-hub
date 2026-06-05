@@ -177,15 +177,15 @@ function Index() {
 
       {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
       <section className="py-12 px-5 bg-background">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative flex items-center justify-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.05fr] gap-12 md:gap-16 items-center">
+          <div className="relative flex items-center justify-center overflow-hidden">
             <img
               src={packshot.url}
               alt="CIAO! Sicilian EVOO full packshot — cooking, finishing and infused range"
-              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] scale-[1.35] md:scale-[1.45]"
+              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] scale-[1.15] md:scale-[1.2]"
             />
           </div>
-          <div>
+          <div className="relative z-10">
             <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">
               🔒 Premium · Real Origin · Everyday Use
             </span>
