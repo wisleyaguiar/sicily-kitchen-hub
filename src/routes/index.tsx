@@ -299,7 +299,7 @@ function Index() {
                   src={finishingTable.url}
                   alt="CIAO! Finishing — green squeeze bottle on a Sicilian table with burrata, bread, pasta and pizza"
                   className="h-80 w-full object-cover rounded-2xl"
-                  style={{ objectPosition: "46% 65%" }}
+                  style={{ objectPosition: "center 18%" }}
                 />
               </div>
               <h3 className="text-3xl uppercase text-primary">CIAO! Finishing</h3>
