@@ -120,6 +120,7 @@
   /* Chemical Memory surrogate (brush/marker): Permanent Marker */
   --font-script: "Permanent Marker", "Caveat Brush", cursive;
   --font-body: "Jost", "Futura", "Inter", system-ui, sans-serif;
+  --font-mono: "Anonymous Pro", "Orator Std", "Courier New", monospace;
 }
 
 .dark {
@@ -178,7 +179,8 @@
   background-color: #ffffff;
   background-image:
     repeating-conic-gradient(var(--brand-red) 0% 25%, #ffffff 0% 50%);
-  background-size: 28px 28px;
+  background-size: 24px 24px;
+  background-position: 0 0;
 }
 .ciao-script {
   font-family: var(--font-script);
