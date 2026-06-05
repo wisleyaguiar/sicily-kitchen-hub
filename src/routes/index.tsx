@@ -62,7 +62,7 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section className="relative pt-16 pb-24 px-5">
+      <section className="relative pt-10 pb-12 px-5">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.52_0.18_148_/_0.18),_transparent_60%),radial-gradient(ellipse_at_bottom_left,_oklch(0.58_0.22_27_/_0.15),_transparent_55%)]" />
         <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-12 items-center">
           <div>
@@ -141,6 +141,7 @@ function Index() {
         </div>
       </section>
 
+      <div className="h-6 checker-band" />
 
       {/* WHY CIAO */}
       <section id="why" className="py-12 px-5 bg-[var(--brand-cream)]">
