@@ -163,17 +163,18 @@ function Index() {
       {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
       <section className="py-24 px-5 bg-background">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.1fr] gap-12 items-center">
-          <div className="relative">
-            <div className="absolute -inset-4 bg-secondary rounded-[2rem] -rotate-2" />
-            <div className="relative bg-[var(--brand-cream)] border-4 border-foreground rounded-[2rem] p-10 flex items-center justify-center">
-              <img src={basilProduct.url} alt="CIAO! premium Sicilian EVOO bottle" className="h-[420px] object-contain animate-float" />
-            </div>
+          <div className="relative flex items-center justify-center">
+            <img
+              src={packshot.url}
+              alt="CIAO! Sicilian EVOO full packshot — cooking, finishing and infused range"
+              className="w-full h-auto object-contain animate-float drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] rotate-[-2deg]"
+            />
           </div>
           <div>
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">
               🔒 Premium · Real Origin · Everyday Use
             </span>
-            <h2 className="mt-4 text-4xl md:text-5xl uppercase leading-[0.95]">
+            <h2 className="mt-4 text-4xl md:text-5xl uppercase leading-[0.95] text-primary">
               More than a regular<br/>grocery store olive oil.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
