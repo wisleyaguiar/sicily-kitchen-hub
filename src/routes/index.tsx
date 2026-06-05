@@ -19,6 +19,11 @@ import truffleFlat from "@/assets/ciao-truffle-flat.png.asset.json";
 import basilFlat from "@/assets/ciao-basil-flat.png.asset.json";
 import chiliFlat from "@/assets/ciao-chili-flat.png.asset.json";
 import rosemaryFlat from "@/assets/ciao-rosemary-flat.png.asset.json";
+import truffle100 from "@/assets/ciao-truffle-100.png.asset.json";
+import basil100 from "@/assets/ciao-basil-100.png.asset.json";
+import chili100 from "@/assets/ciao-chili-100.png.asset.json";
+import rosemary100 from "@/assets/ciao-rosemary-100.png.asset.json";
+import kitchenDuo from "@/assets/ciao-kitchen-set.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -501,24 +506,17 @@ function Index() {
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-secondary">Choose your CIAO!</span>
             <h2 className="mt-3 text-4xl md:text-6xl uppercase">Bring Sicily to your table</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: finishingFlat.url, badge: "Best Seller", price: "$37.99" },
-              { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat.url, badge: "Squeeze", price: "$22.99" },
-              { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat.url, badge: "Everyday", price: "$17.99" },
-              { title: "Infused — Truffle", size: "250ml · 8.45 fl oz", desc: "Rich, indulgent, gourmet.", img: truffleFlat.url, badge: "Gourmet", price: "$12.99" },
-              { title: "Infused — Basil", size: "250ml · 8.45 fl oz", desc: "Fresh Italian basil EVOO.", img: basilFlat.url, badge: "Fresh", price: "$12.99" },
-              { title: "Infused — Chili", size: "250ml · 8.45 fl oz", desc: "A bold Sicilian kick.", img: chiliFlat.url, badge: "Spicy", price: "$12.99" },
-            ].map(p=>(
-              <article key={p.title} className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
+          {(() => {
+            const ProductCard = ({ p }: { p: { title: string; size: string; desc: string; img: string; badge: string; price: string; objectClass?: string } }) => (
+              <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
                 <div className="aspect-square bg-white flex items-center justify-center overflow-hidden relative">
-                  <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">{p.badge}</span>
-                  <img src={p.img} alt={p.title} className="h-full w-full object-contain p-6 group-hover:scale-105 transition" />
+                  <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10">{p.badge}</span>
+                  <img src={p.img} alt={p.title} className={`h-full w-full object-contain p-2 scale-125 group-hover:scale-[1.35] transition ${p.objectClass ?? ""}`} />
                 </div>
                 <div className="p-5">
-                  <div className="flex items-baseline justify-between">
+                  <div className="flex items-baseline justify-between gap-2">
                     <h3 className="text-xl uppercase">{p.title}</h3>
-                    <span className="text-primary font-bold">{p.price}</span>
+                    <span className="text-primary font-bold whitespace-nowrap">{p.price}</span>
                   </div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-[var(--font-mono)]">{p.size}</p>
                   <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
@@ -527,11 +525,47 @@ function Index() {
                   </button>
                 </div>
               </article>
-            ))}
-          </div>
-          <div className="text-center mt-10 text-sm uppercase tracking-widest text-background/70">
-            15% OFF welcome offer · Free shipping over $19.99
-          </div>
+            );
+            const evoo = [
+              { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: kitchenDuo.url, badge: "Best Seller", price: "$37.99", objectClass: "scale-110 group-hover:scale-[1.18]" },
+              { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat.url, badge: "Squeeze", price: "$22.99" },
+              { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat.url, badge: "Everyday", price: "$17.99" },
+            ];
+            const infused100 = [
+              { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100.url, badge: "100ml", price: "$12.99" },
+              { title: "Infused — Basil", size: "100ml · 3.38 fl oz", desc: "Fresh Italian basil EVOO.", img: basil100.url, badge: "100ml", price: "$12.99" },
+              { title: "Infused — Chili", size: "100ml · 3.38 fl oz", desc: "A bold Sicilian kick.", img: chili100.url, badge: "100ml", price: "$12.99" },
+              { title: "Infused — Rosemary", size: "100ml · 3.38 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemary100.url, badge: "100ml", price: "$12.99" },
+            ];
+            const infused250 = [
+              { title: "Infused — Truffle", size: "250ml · 8.45 fl oz", desc: "Rich, indulgent, gourmet.", img: truffleFlat.url, badge: "250ml", price: "$19.99" },
+              { title: "Infused — Basil", size: "250ml · 8.45 fl oz", desc: "Fresh Italian basil EVOO.", img: basilFlat.url, badge: "250ml", price: "$19.99" },
+              { title: "Infused — Chili", size: "250ml · 8.45 fl oz", desc: "A bold Sicilian kick.", img: chiliFlat.url, badge: "250ml", price: "$19.99" },
+              { title: "Infused — Rosemary", size: "250ml · 8.45 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemaryFlat.url, badge: "250ml", price: "$19.99" },
+            ];
+            return (
+              <>
+                <h3 className="font-[var(--font-mono)] text-xs uppercase tracking-[0.3em] text-secondary mb-4">Extra Virgin Olive Oil</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {evoo.map(p => <ProductCard key={p.title} p={p} />)}
+                </div>
+
+                <h3 className="font-[var(--font-mono)] text-xs uppercase tracking-[0.3em] text-secondary mt-14 mb-4">Infused · 100ml</h3>
+                <div className="grid md:grid-cols-4 gap-6">
+                  {infused100.map(p => <ProductCard key={p.title} p={p} />)}
+                </div>
+
+                <h3 className="font-[var(--font-mono)] text-xs uppercase tracking-[0.3em] text-secondary mt-14 mb-4">Infused · 250ml</h3>
+                <div className="grid md:grid-cols-4 gap-6">
+                  {infused250.map(p => <ProductCard key={p.title} p={p} />)}
+                </div>
+
+                <div className="text-center mt-10 text-sm uppercase tracking-widest text-background/70">
+                  15% OFF welcome offer · Free shipping over $19.99
+                </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
