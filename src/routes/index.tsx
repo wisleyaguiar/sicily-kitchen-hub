@@ -24,7 +24,6 @@ import basil100 from "@/assets/ciao-basil-100.png.asset.json";
 import chili100 from "@/assets/ciao-chili-100.png.asset.json";
 import rosemary100 from "@/assets/ciao-rosemary-100.png.asset.json";
 import kitchenDuo from "@/assets/ciao-kitchen-set.jpg.asset.json";
-import rosemaryFlat from "@/assets/ciao-rosemary-flat.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
