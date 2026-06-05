@@ -19,6 +19,12 @@ import truffleFlat from "@/assets/ciao-truffle-flat.png.asset.json";
 import basilFlat from "@/assets/ciao-basil-flat.png.asset.json";
 import chiliFlat from "@/assets/ciao-chili-flat.png.asset.json";
 import rosemaryFlat from "@/assets/ciao-rosemary-flat.png.asset.json";
+import truffle100 from "@/assets/ciao-truffle-100.png.asset.json";
+import basil100 from "@/assets/ciao-basil-100.png.asset.json";
+import chili100 from "@/assets/ciao-chili-100.png.asset.json";
+import rosemary100 from "@/assets/ciao-rosemary-100.png.asset.json";
+import kitchenDuo from "@/assets/ciao-kitchen-set.jpg.asset.json";
+import rosemaryFlat from "@/assets/ciao-rosemary-flat.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
