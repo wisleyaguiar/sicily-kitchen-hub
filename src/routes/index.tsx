@@ -278,25 +278,25 @@ function Index() {
       <section id="cooking" className="py-24 px-5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Cooking + Finishing</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase">One for the Pan.<br/>One for the Plate.</h2>
+            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">Cooking + Finishing</span>
+            <h2 className="mt-3 text-4xl md:text-6xl uppercase text-primary">One for the Pan.<br/>One for the Plate.</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-3 checker-band" />
-              <div className="flex justify-center my-6">
-                <img src={basilProduct.url} alt="CIAO Cooking bottle" className="h-80 object-contain" />
+              <div className="absolute top-0 left-0 right-0 h-6 checker-band" />
+              <div className="flex justify-center my-8 pt-4">
+                <img src={ciaoCooking.url} alt="CIAO! Cooking — yellow squeeze bottle in a kitchen scene" className="h-80 w-full object-cover rounded-2xl" />
               </div>
-              <h3 className="text-3xl uppercase">CIAO! Cooking</h3>
+              <h3 className="text-3xl uppercase text-primary">CIAO! Cooking</h3>
               <p className="mt-3 text-muted-foreground">For everyday cooking with real extra virgin olive oil. Perfect for preparing recipes, grilling, sautéing and elevating the quality of your food from the very beginning.</p>
             </article>
-            <article className="bg-secondary text-secondary-foreground border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-3 checker-band" />
-              <div className="flex justify-center my-6">
-                <img src={finishing.url} alt="CIAO Finishing squeeze bottle" className="h-80 object-contain" />
+            <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-6 checker-band" />
+              <div className="flex justify-center my-8 pt-4">
+                <img src={finishingBottle.url} alt="CIAO! Finishing — green squeeze bottle" className="h-80 object-contain" />
               </div>
-              <h3 className="text-3xl uppercase">CIAO! Finishing</h3>
-              <p className="mt-3 text-secondary-foreground/90">For using after the dish is ready. Perfect for pasta, pizza, salads, bread, eggs, vegetables, meats, fish, bowls and soups.</p>
+              <h3 className="text-3xl uppercase text-primary">CIAO! Finishing</h3>
+              <p className="mt-3 text-muted-foreground">For using after the dish is ready. Perfect for pasta, pizza, salads, bread, eggs, vegetables, meats, fish, bowls and soups.</p>
             </article>
           </div>
           <div className="mt-10 text-center bg-primary text-primary-foreground rounded-3xl p-10 border-4 border-foreground">
