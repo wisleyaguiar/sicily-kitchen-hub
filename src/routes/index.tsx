@@ -371,7 +371,7 @@ function Index() {
             </a>
           </div>
           <div className="relative flex justify-center">
-            <img src={finishing.url} alt="CIAO Finishing drizzle" className="h-[480px] object-contain animate-float drop-shadow-2xl" />
+            <img src={finishingBottle.url} alt="CIAO Finishing drizzle" className="h-[680px] md:h-[760px] w-auto object-contain animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)]" />
             {[0,0.4,0.8,1.2].map(d=>(
               <span key={d} className="absolute top-[42%] left-1/2 w-1.5 h-6 rounded-full bg-[oklch(0.85_0.18_95)] animate-drizzle" style={{ animationDelay: `${d}s` }} />
             ))}
