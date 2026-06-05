@@ -11,6 +11,9 @@ import kitchenSet from "@/assets/kitchen-set.png.asset.json";
 import packshot from "@/assets/ciao-packshot.jpg.asset.json";
 import ciaoCooking from "@/assets/ciao-cooking.png.asset.json";
 import finishingBottle from "@/assets/ciao-finishing-bottle.png.asset.json";
+import finishingTable from "@/assets/ciao-finishing-table.jpg.asset.json";
+import etnaLandscape from "@/assets/etna-landscape.png.asset.json";
+import pizzolaMascot from "@/assets/pizzola-mascot.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -293,7 +296,7 @@ function Index() {
             <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-6 checker-band" />
               <div className="flex justify-center my-8 pt-4">
-                <img src={finishingBottle.url} alt="CIAO! Finishing — green squeeze bottle" className="h-80 object-contain" />
+                <img src={finishingTable.url} alt="CIAO! Finishing — green squeeze bottle on a Sicilian table with burrata, bread, pasta and pizza" className="h-80 w-full object-cover rounded-2xl" />
               </div>
               <h3 className="text-3xl uppercase text-primary">CIAO! Finishing</h3>
               <p className="mt-3 text-muted-foreground">For using after the dish is ready. Perfect for pasta, pizza, salads, bread, eggs, vegetables, meats, fish, bowls and soups.</p>
@@ -370,11 +373,12 @@ function Index() {
               I want more flavor
             </a>
           </div>
-          <div className="relative flex justify-center">
-            <img src={finishingBottle.url} alt="CIAO Finishing drizzle" className="h-[680px] md:h-[760px] w-auto object-contain animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)]" />
-            {[0,0.4,0.8,1.2].map(d=>(
-              <span key={d} className="absolute top-[42%] left-1/2 w-1.5 h-6 rounded-full bg-[oklch(0.85_0.18_95)] animate-drizzle" style={{ animationDelay: `${d}s` }} />
-            ))}
+          <div className="relative flex justify-center items-center min-h-[700px] md:min-h-[860px]">
+            <img
+              src={finishingBottle.url}
+              alt="CIAO Finishing bottle"
+              className="h-[760px] md:h-[920px] w-auto object-contain drop-shadow-[0_50px_70px_rgba(0,0,0,0.5)]"
+            />
           </div>
         </div>
       </section>
@@ -456,10 +460,16 @@ function Index() {
               ))}
             </ul>
           </div>
-          <div className="bg-primary text-primary-foreground border-4 border-foreground rounded-3xl p-8 flex flex-col justify-between">
+          <div className="relative overflow-hidden border-4 border-foreground rounded-3xl p-8 flex flex-col justify-between text-primary-foreground min-h-[360px]">
+            <div
+              className="absolute inset-0 -z-10 bg-cover bg-center"
+              style={{ backgroundImage: `url(${etnaLandscape.url})` }}
+              aria-hidden
+            />
+            <div className="absolute inset-0 -z-10 bg-[linear-gradient(135deg,_oklch(0.58_0.22_27_/_0.78),_oklch(0.45_0.20_27_/_0.65))]" aria-hidden />
             <div>
               <h3 className="text-3xl md:text-4xl uppercase">Premium. Fun.<br/>Truly Sicilian.</h3>
-              <p className="mt-4 opacity-90">
+              <p className="mt-4 opacity-95 drop-shadow">
                 Other olive oils may look premium. But many have generic origin, little transparency, little personality.
                 CIAO! is made to be <strong>used, displayed and remembered.</strong>
               </p>
