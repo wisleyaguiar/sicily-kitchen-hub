@@ -13,6 +13,7 @@ import ciaoCooking from "@/assets/ciao-cooking.png.asset.json";
 import finishingBottle from "@/assets/ciao-finishing-bottle.png.asset.json";
 import finishingTable from "@/assets/ciao-finishing-table.jpg.asset.json";
 import etnaLandscape from "@/assets/etna-landscape.png.asset.json";
+import etnaHero from "@/assets/etna-hero.png.asset.json";
 import cookingFlat from "@/assets/ciao-cooking-flat.png.asset.json";
 import finishingFlat from "@/assets/ciao-finishing-flat.png.asset.json";
 import truffleFlat from "@/assets/ciao-truffle-flat.png.asset.json";
@@ -176,12 +177,12 @@ function Index() {
 
       {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
       <section className="py-12 px-5 bg-background">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.1fr] gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="relative flex items-center justify-center">
             <img
               src={packshot.url}
               alt="CIAO! Sicilian EVOO full packshot — cooking, finishing and infused range"
-              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] scale-110"
+              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] scale-[1.35] md:scale-[1.45]"
             />
           </div>
           <div>
@@ -479,10 +480,10 @@ function Index() {
           <div className="relative overflow-hidden border-4 border-foreground rounded-3xl p-8 flex flex-col justify-between text-white min-h-[460px]">
             <div
               className="absolute inset-0 -z-10 bg-cover bg-center scale-105"
-              style={{ backgroundImage: `url(${etnaLandscape.url})` }}
+              style={{ backgroundImage: `url(${etnaHero.url})` }}
               aria-hidden
             />
-            <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,_rgba(0,0,0,0.05)_0%,_rgba(0,0,0,0.45)_100%)]" aria-hidden />
+            <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,_rgba(0,0,0,0.25)_0%,_rgba(0,0,0,0.55)_100%)]" aria-hidden />
             <div>
               <h3 className="text-3xl md:text-4xl uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">Premium. Fun.<br/>Truly Sicilian.</h3>
               <p className="mt-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
