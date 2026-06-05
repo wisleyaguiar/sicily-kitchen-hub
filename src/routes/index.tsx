@@ -8,6 +8,9 @@ import rosemaryContext from "@/assets/Rosemary_Context.asset.json";
 import finishing from "@/assets/500_FINISHING_AF_BG_ZERO.asset.json";
 import ciaoLogo from "@/assets/ciao-logo.png.asset.json";
 import kitchenSet from "@/assets/kitchen-set.png.asset.json";
+import packshot from "@/assets/ciao-packshot.jpg.asset.json";
+import ciaoCooking from "@/assets/ciao-cooking.png.asset.json";
+import finishingBottle from "@/assets/ciao-finishing-bottle.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -60,7 +63,7 @@ function Index() {
             </span>
             <h1 className="mt-6 text-5xl md:text-7xl leading-[0.95] uppercase text-primary">
               New Cooking<br/>
-              &amp; Finishing<br/>
+              AND Finishing<br/>
               Kit
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl">
@@ -160,17 +163,18 @@ function Index() {
       {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
       <section className="py-24 px-5 bg-background">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.1fr] gap-12 items-center">
-          <div className="relative">
-            <div className="absolute -inset-4 bg-secondary rounded-[2rem] -rotate-2" />
-            <div className="relative bg-[var(--brand-cream)] border-4 border-foreground rounded-[2rem] p-10 flex items-center justify-center">
-              <img src={basilProduct.url} alt="CIAO! premium Sicilian EVOO bottle" className="h-[420px] object-contain animate-float" />
-            </div>
+          <div className="relative flex items-center justify-center">
+            <img
+              src={packshot.url}
+              alt="CIAO! Sicilian EVOO full packshot — cooking, finishing and infused range"
+              className="w-full h-auto object-contain animate-float drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] rotate-[-2deg]"
+            />
           </div>
           <div>
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">
               🔒 Premium · Real Origin · Everyday Use
             </span>
-            <h2 className="mt-4 text-4xl md:text-5xl uppercase leading-[0.95]">
+            <h2 className="mt-4 text-4xl md:text-5xl uppercase leading-[0.95] text-primary">
               More than a regular<br/>grocery store olive oil.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
@@ -274,25 +278,25 @@ function Index() {
       <section id="cooking" className="py-24 px-5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Cooking + Finishing</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase">One for the Pan.<br/>One for the Plate.</h2>
+            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">Cooking + Finishing</span>
+            <h2 className="mt-3 text-4xl md:text-6xl uppercase text-primary">One for the Pan.<br/>One for the Plate.</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-3 checker-band" />
-              <div className="flex justify-center my-6">
-                <img src={basilProduct.url} alt="CIAO Cooking bottle" className="h-80 object-contain" />
+              <div className="absolute top-0 left-0 right-0 h-6 checker-band" />
+              <div className="flex justify-center my-8 pt-4">
+                <img src={ciaoCooking.url} alt="CIAO! Cooking — yellow squeeze bottle in a kitchen scene" className="h-80 w-full object-cover rounded-2xl" />
               </div>
-              <h3 className="text-3xl uppercase">CIAO! Cooking</h3>
+              <h3 className="text-3xl uppercase text-primary">CIAO! Cooking</h3>
               <p className="mt-3 text-muted-foreground">For everyday cooking with real extra virgin olive oil. Perfect for preparing recipes, grilling, sautéing and elevating the quality of your food from the very beginning.</p>
             </article>
-            <article className="bg-secondary text-secondary-foreground border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-3 checker-band" />
-              <div className="flex justify-center my-6">
-                <img src={finishing.url} alt="CIAO Finishing squeeze bottle" className="h-80 object-contain" />
+            <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-6 checker-band" />
+              <div className="flex justify-center my-8 pt-4">
+                <img src={finishingBottle.url} alt="CIAO! Finishing — green squeeze bottle" className="h-80 object-contain" />
               </div>
-              <h3 className="text-3xl uppercase">CIAO! Finishing</h3>
-              <p className="mt-3 text-secondary-foreground/90">For using after the dish is ready. Perfect for pasta, pizza, salads, bread, eggs, vegetables, meats, fish, bowls and soups.</p>
+              <h3 className="text-3xl uppercase text-primary">CIAO! Finishing</h3>
+              <p className="mt-3 text-muted-foreground">For using after the dish is ready. Perfect for pasta, pizza, salads, bread, eggs, vegetables, meats, fish, bowls and soups.</p>
             </article>
           </div>
           <div className="mt-10 text-center bg-primary text-primary-foreground rounded-3xl p-10 border-4 border-foreground">
@@ -367,7 +371,7 @@ function Index() {
             </a>
           </div>
           <div className="relative flex justify-center">
-            <img src={finishing.url} alt="CIAO Finishing drizzle" className="h-[480px] object-contain animate-float drop-shadow-2xl" />
+            <img src={finishingBottle.url} alt="CIAO Finishing drizzle" className="h-[680px] md:h-[760px] w-auto object-contain animate-float drop-shadow-[0_40px_60px_rgba(0,0,0,0.45)]" />
             {[0,0.4,0.8,1.2].map(d=>(
               <span key={d} className="absolute top-[42%] left-1/2 w-1.5 h-6 rounded-full bg-[oklch(0.85_0.18_95)] animate-drizzle" style={{ animationDelay: `${d}s` }} />
             ))}
