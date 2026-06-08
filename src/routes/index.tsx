@@ -25,6 +25,10 @@ import basil100 from "@/assets/ciao-basil-100.png.asset.json";
 import chili100 from "@/assets/ciao-chili-100.png.asset.json";
 import rosemary100 from "@/assets/ciao-rosemary-100.png.asset.json";
 import kitchenDuo from "@/assets/ciao-kitchen-set.jpg.asset.json";
+import iconBasil from "@/assets/icon-basil.png.asset.json";
+import iconRosemary from "@/assets/icon-rosemary.png.asset.json";
+import iconChili from "@/assets/icon-chili.png.asset.json";
+import iconTruffle from "@/assets/icon-truffle.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -501,17 +505,21 @@ function Index() {
       <div className="h-6 checker-band" />
 
       {/* SHOP */}
-      <section id="shop" className="py-12 px-5 bg-foreground text-background">
+      <section id="shop" className="py-12 px-5 bg-primary text-primary-foreground">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-secondary">Choose your CIAO!</span>
+            <span className="text-base md:text-lg font-extrabold uppercase tracking-[0.3em] text-white">Choose your CIAO!</span>
             <h2 className="mt-3 text-4xl md:text-6xl uppercase">Bring Sicily to your table</h2>
           </div>
           {(() => {
-            const ProductCard = ({ p }: { p: { title: string; size: string; desc: string; img: string; badge: string; price: string; objectClass?: string } }) => (
+            const ProductCard = ({ p }: { p: { title: string; size: string; desc: string; img: string; badge: string; badgeIcon?: string; price: string; objectClass?: string } }) => (
               <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
                 <div className="aspect-square bg-white flex items-center justify-center overflow-hidden relative">
-                  <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10">{p.badge}</span>
+                  {p.badgeIcon ? (
+                    <img src={p.badgeIcon} alt={p.badge} className="absolute top-2 left-2 h-16 w-16 md:h-20 md:w-20 object-contain z-10 drop-shadow-sm" />
+                  ) : (
+                    <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10">{p.badge}</span>
+                  )}
                   <img src={p.img} alt={p.title} className={`h-full w-full object-contain p-2 scale-125 group-hover:scale-[1.35] transition ${p.objectClass ?? ""}`} />
                 </div>
                 <div className="p-5">
@@ -521,7 +529,7 @@ function Index() {
                   </div>
                   <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-[var(--font-mono)]">{p.size}</p>
                   <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
-                  <button className="mt-4 w-full bg-foreground text-background py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-primary transition">
+                  <button className="mt-4 w-full bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition">
                     Add to cart
                   </button>
                 </div>
@@ -533,10 +541,10 @@ function Index() {
               { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat.url, badge: "Everyday", price: "$17.99" },
             ];
             const infused100 = [
-              { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100.url, badge: "100ml", price: "$12.99" },
-              { title: "Infused — Basil", size: "100ml · 3.38 fl oz", desc: "Fresh Italian basil EVOO.", img: basil100.url, badge: "100ml", price: "$12.99" },
-              { title: "Infused — Chili", size: "100ml · 3.38 fl oz", desc: "A bold Sicilian kick.", img: chili100.url, badge: "100ml", price: "$12.99" },
-              { title: "Infused — Rosemary", size: "100ml · 3.38 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemary100.url, badge: "100ml", price: "$12.99" },
+              { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100.url, badge: "Truffle", badgeIcon: iconTruffle.url, price: "$12.99" },
+              { title: "Infused — Basil", size: "100ml · 3.38 fl oz", desc: "Fresh Italian basil EVOO.", img: basil100.url, badge: "Basil", badgeIcon: iconBasil.url, price: "$12.99" },
+              { title: "Infused — Chili", size: "100ml · 3.38 fl oz", desc: "A bold Sicilian kick.", img: chili100.url, badge: "Chili", badgeIcon: iconChili.url, price: "$12.99" },
+              { title: "Infused — Rosemary", size: "100ml · 3.38 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemary100.url, badge: "Rosemary", badgeIcon: iconRosemary.url, price: "$12.99" },
             ];
             const infused250 = [
               { title: "Infused — Truffle", size: "250ml · 8.45 fl oz", desc: "Rich, indulgent, gourmet.", img: truffleFlat.url, badge: "250ml", price: "$19.99" },
@@ -546,22 +554,22 @@ function Index() {
             ];
             return (
               <>
-                <h3 className="font-[var(--font-mono)] text-xs uppercase tracking-[0.3em] text-secondary mb-4">Extra Virgin Olive Oil</h3>
+                <h3 className="font-[var(--font-mono)] text-base md:text-lg font-bold uppercase tracking-[0.3em] text-white mb-4">Extra Virgin Olive Oil</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   {evoo.map(p => <ProductCard key={p.title} p={p} />)}
                 </div>
 
-                <h3 className="font-[var(--font-mono)] text-xs uppercase tracking-[0.3em] text-secondary mt-14 mb-4">Infused · 100ml</h3>
+                <h3 className="font-[var(--font-mono)] text-base md:text-lg font-bold uppercase tracking-[0.3em] text-white mt-14 mb-4">Infused · 100ml</h3>
                 <div className="grid md:grid-cols-4 gap-6">
                   {infused100.map(p => <ProductCard key={p.title} p={p} />)}
                 </div>
 
-                <h3 className="font-[var(--font-mono)] text-xs uppercase tracking-[0.3em] text-secondary mt-14 mb-4">Infused · 250ml</h3>
+                <h3 className="font-[var(--font-mono)] text-base md:text-lg font-bold uppercase tracking-[0.3em] text-white mt-14 mb-4">Infused · 250ml</h3>
                 <div className="grid md:grid-cols-4 gap-6">
                   {infused250.map(p => <ProductCard key={p.title} p={p} />)}
                 </div>
 
-                <div className="text-center mt-10 text-sm uppercase tracking-widest text-background/70">
+                <div className="text-center mt-10 text-base font-bold uppercase tracking-widest text-white">
                   15% OFF welcome offer · Free shipping over $19.99
                 </div>
               </>
