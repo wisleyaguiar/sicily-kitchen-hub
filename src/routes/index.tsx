@@ -516,7 +516,7 @@ function Index() {
               <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
                 <div className="aspect-square bg-white flex items-center justify-center overflow-hidden relative">
                   {p.badgeIcon ? (
-                  <img src={p.badgeIcon} alt={p.badge} className="absolute top-0 left-0 h-40 w-40 md:h-48 md:w-48 object-contain z-10 drop-shadow-md" />
+                  <img src={p.badgeIcon} alt={p.badge} className="absolute top-3 left-3 h-14 w-14 md:h-16 md:w-16 object-contain z-20 drop-shadow-md" />
                   ) : (
                     <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10">{p.badge}</span>
                   )}
