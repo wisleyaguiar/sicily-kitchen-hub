@@ -25,6 +25,10 @@ import basil100 from "@/assets/ciao-basil-100.png.asset.json";
 import chili100 from "@/assets/ciao-chili-100.png.asset.json";
 import rosemary100 from "@/assets/ciao-rosemary-100.png.asset.json";
 import kitchenDuo from "@/assets/ciao-kitchen-set.jpg.asset.json";
+import iconBasil from "@/assets/icon-basil.png.asset.json";
+import iconRosemary from "@/assets/icon-rosemary.png.asset.json";
+import iconChili from "@/assets/icon-chili.png.asset.json";
+import iconTruffle from "@/assets/icon-truffle.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
