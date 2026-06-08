@@ -481,7 +481,7 @@ function Index() {
             <img
               src={finishingBottle.url}
               alt="CIAO! Finishing bottle"
-              className="pointer-events-none select-none absolute right-2 md:right-3 top-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)]"
+              className="pointer-events-none select-none absolute right-0 top-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)]"
               aria-hidden
             />
             <div className="relative max-w-[60%] z-10">
