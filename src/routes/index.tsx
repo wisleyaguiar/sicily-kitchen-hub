@@ -481,10 +481,10 @@ function Index() {
             <img
               src={finishingBottle.url}
               alt="CIAO! Finishing bottle"
-              className="pointer-events-none select-none absolute right-4 top-1/2 -translate-y-1/2 h-[85%] w-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)]"
+              className="pointer-events-none select-none absolute right-2 md:right-3 top-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)]"
               aria-hidden
             />
-            <div className="relative max-w-[58%] z-10">
+            <div className="relative max-w-[60%] z-10">
               <h3 className="text-3xl md:text-4xl uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Premium. Fun.<br/>Truly Sicilian.</h3>
               <p className="mt-4 text-white/90">
                 Other olive oils may look premium. But many have generic origin, little transparency, little personality.
