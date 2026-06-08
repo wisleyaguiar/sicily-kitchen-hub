@@ -514,11 +514,21 @@ function Index() {
             <h2 className="mt-3 text-4xl md:text-6xl uppercase">Bring Sicily to your table</h2>
           </div>
           {(() => {
-            const ProductCard = ({ p }: { p: { title: string; size: string; desc: string; img: string; badge: string; badgeIcon?: string; price: string; objectClass?: string } }) => (
+            const ProductCard = ({ p }: { p: { title: string; size: string; desc: string; img: string; badge: string; badgeIcon?: string; badgeIconWide?: boolean; price: string; objectClass?: string } }) => (
               <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
                 <div className="aspect-square bg-white flex items-center justify-center overflow-hidden relative">
                   {p.badgeIcon ? (
-                    <img src={p.badgeIcon} alt={p.badge} className="absolute top-2 left-2 h-20 w-20 md:h-24 md:w-24 object-contain z-20 drop-shadow-md pointer-events-none" />
+                    <img
+                      src={p.badgeIcon}
+                      alt={p.badge}
+                      className={`absolute top-2 left-2 object-contain z-20 drop-shadow-md pointer-events-none ${
+                        p.badgeIconWide
+                          ? "w-36 md:w-44 h-auto"
+                          : "h-20 w-20 md:h-24 md:w-24"
+                      }`}
+                    />
+                  ) : p.badge === "Best Seller" ? (
+                    <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-2 rounded-full z-10 shadow-md">{p.badge}</span>
                   ) : (
                     <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10">{p.badge}</span>
                   )}
@@ -539,8 +549,8 @@ function Index() {
             );
             const evoo = [
               { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: kitchenDuo.url, badge: "Best Seller", price: "$37.99", objectClass: "scale-110 group-hover:scale-[1.18]" },
-              { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat.url, badge: "Squeeze", price: "$22.99" },
-              { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat.url, badge: "Everyday", price: "$17.99" },
+              { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat.url, badge: "Finishing", badgeIcon: iconFinishing.url, badgeIconWide: true, price: "$22.99" },
+              { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat.url, badge: "Cooking", badgeIcon: iconCooking.url, badgeIconWide: true, price: "$17.99" },
             ];
             const infused100 = [
               { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100.url, badge: "Truffle", badgeIcon: iconTruffle.url, price: "$12.99" },
