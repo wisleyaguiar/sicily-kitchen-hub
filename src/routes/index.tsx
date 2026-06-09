@@ -9,6 +9,7 @@ import finishing from "@/assets/500_FINISHING_AF_BG_ZERO.asset.json";
 import ciaoLogo from "@/assets/ciao-logo.png.asset.json";
 import kitchenSet from "@/assets/kitchen-set.png.asset.json";
 import packshot from "@/assets/ciao-packshot.jpg.asset.json";
+import ciaoFullLogo from "@/assets/ciao-full-logo.png.asset.json";
 import ciaoCooking from "@/assets/ciao-cooking.png.asset.json";
 import finishingBottle from "@/assets/ciao-finishing-bottle.png.asset.json";
 import finishingTable from "@/assets/ciao-finishing-table.jpg.asset.json";
