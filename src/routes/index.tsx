@@ -189,12 +189,12 @@ function Index() {
             <img
               src={ciaoFullLogo.url}
               alt="CIAO! Extra Virgin Olive Oil — Prodotto in Italia, Sicilia"
-              className="w-2/3 md:w-3/5 h-auto object-contain mb-0 md:mb-1"
+              className="w-2/3 md:w-3/5 h-auto object-contain mb-0"
             />
             <img
               src={packshot.url}
               alt="CIAO! Sicilian EVOO full packshot — cooking, finishing and infused range"
-              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] -mt-1 md:-mt-2"
+              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] -mt-2 md:-mt-4"
             />
           </div>
           <div className="relative z-10">
