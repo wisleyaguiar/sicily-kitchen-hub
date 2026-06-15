@@ -13,6 +13,7 @@ import ciaoFullLogo from "@/assets/ciao-full-logo.png.asset.json";
 import ciaoCooking from "@/assets/ciao-cooking.png.asset.json";
 import finishingBottle from "@/assets/ciao-finishing-bottle.png.asset.json";
 import pastaTable from "@/assets/ciao-pasta-table.jpg.asset.json";
+import saladLandscape from "@/assets/ciao-salad-landscape.jpg.asset.json";
 import finishingTable from "@/assets/ciao-finishing-table.jpg.asset.json";
 import etnaLandscape from "@/assets/etna-landscape.png.asset.json";
 import etnaHero from "@/assets/etna-hero.png.asset.json";
@@ -490,21 +491,22 @@ function Index() {
               ))}
             </ul>
           </div>
-          <div className="relative overflow-hidden border-4 border-foreground rounded-3xl p-8 flex flex-col justify-between text-white min-h-[460px] bg-primary">
+          <div className="relative overflow-hidden border-4 border-foreground rounded-3xl p-8 flex flex-col justify-between text-white min-h-[460px]">
             <img
-              src={finishingBottle.url}
-              alt="CIAO! Finishing bottle"
-              className="pointer-events-none select-none absolute right-0 top-1/2 -translate-y-1/2 h-[78%] w-auto object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)]"
+              src={saladLandscape.url}
+              alt="CIAO! Extra Virgin Olive Oil bottle beside a fresh Sicilian salad with a sunlit countryside backdrop"
+              className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover"
               aria-hidden
             />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/10" aria-hidden />
             <div className="relative max-w-[60%] z-10">
-              <h3 className="text-3xl md:text-4xl uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">Premium. Fun.<br/>Truly Sicilian.</h3>
-              <p className="mt-4 text-white/90">
+              <h3 className="text-3xl md:text-4xl uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">Premium. Fun.<br/>Truly Sicilian.</h3>
+              <p className="mt-4 text-white/95 drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
                 Other olive oils may look premium. But many have generic origin, little transparency, little personality.
                 CIAO! is made to be <strong>used, displayed and remembered.</strong>
               </p>
             </div>
-            <a href="#shop" className="relative inline-block mt-6 bg-background text-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition self-start">
+            <a href="#shop" className="relative z-10 inline-block mt-6 bg-background text-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition self-start shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
               Choose CIAO! now
             </a>
           </div>
