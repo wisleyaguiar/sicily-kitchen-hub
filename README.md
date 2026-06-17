@@ -92,4 +92,26 @@ Compile client and server environments for production:
 npm run build
 ```
 
-This compiles client-side outputs and assets to `dist/client` and SSR server modules to `dist/server`.
+This compiles client-side assets to `.output/public` and SSR server modules to `.output/server` (or `.netlify` if using the Netlify preset).
+
+---
+
+## 🚀 Deployment to Netlify
+
+The project is configured for server-side rendering (SSR) on Netlify using the `netlify.toml` file in the root.
+
+### Method 1: Continuous Integration (Git-based - Recommended)
+1. Push this project to a GitHub repository.
+2. Link the repository to your Netlify account via the Netlify dashboard.
+3. Netlify will auto-detect the configuration and env settings from `netlify.toml` and build the application dynamically on every commit.
+
+### Method 2: Manual Deploy (Local CLI)
+1. Build the project using the Netlify preset:
+   ```bash
+   NITRO_PRESET=netlify npm run build
+   ```
+2. Deploy the static assets and server functions:
+   ```bash
+   netlify deploy --prod
+   ```
+   *(Ensure you run `netlify init` or `netlify link` on the directory first to associate it with your Netlify project.)*

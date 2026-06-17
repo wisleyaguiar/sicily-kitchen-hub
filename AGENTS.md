@@ -68,3 +68,16 @@ Before submitting any code changes, verify correctness:
    ```bash
    npm run build
    ```
+
+---
+
+## 7. Netlify Deployment Conventions
+
+- **Vite Config:** Nitro packaging must be enabled by setting `nitro: true` in [vite.config.ts](file:///Users/wisleyaguiar/Projetos/ciao-sicily-kitchen/vite.config.ts). This is required for server function compilation and routing.
+- **Build Target:** For local builds intended for Netlify deployment, prefix the build with `NITRO_PRESET=netlify` to output files to `.netlify/functions-internal` and `.output/public`.
+- **Deploy Command:** Deploy changes locally using the Netlify CLI:
+  ```bash
+  NITRO_PRESET=netlify npm run build
+  netlify deploy --prod
+  ```
+
