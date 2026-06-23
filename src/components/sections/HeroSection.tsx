@@ -45,7 +45,7 @@ export default function HeroSection() {
           <img
             src={kitchenSet}
             alt="CIAO! Kitchen Set — Cooking and Finishing Extra Virgin Olive Oil on the table"
-            className="w-full h-auto block"
+            className="w-full aspect-[4/3] md:aspect-[4/5] object-cover block rounded-3xl shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
           />
 
           {/* Green starburst seal — authentic zigzag, centered text */}
@@ -72,7 +72,7 @@ export default function HeroSection() {
               })()}
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center text-[var(--brand-cream)] leading-none text-center">
-              <span className="ciao-script text-2xl md:text-3xl -rotate-3">save</span>
+              <span className="ciao-script text-2xl md:text-3xl">save</span>
               <span className="font-display text-[40px] md:text-[54px] tracking-tight mt-1">15%</span>
               <span className="font-display text-sm md:text-lg tracking-[0.3em] mt-1">OFF</span>
             </div>
