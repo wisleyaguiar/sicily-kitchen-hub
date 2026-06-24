@@ -12,13 +12,13 @@ export default function Header() {
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
-        <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider">
+        <nav className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-wider font-display">
           <a href="#" className="hover:opacity-75 transition">Home</a>
           <a href="#shop" className="hover:opacity-75 transition">Shop</a>
           <a href="#faq" className="hover:opacity-75 transition">Contact Us</a>
           <a href="#why" className="hover:opacity-75 transition">Our Story</a>
         </nav>
-        <a href="#shop" className="bg-[var(--brand-cream)] text-primary px-5 py-2.5 text-sm font-bold uppercase tracking-wide rounded-full hover:bg-white transition shadow-md">
+        <a href="#shop" className="inline-flex items-center justify-center bg-[var(--brand-cream)] text-primary px-5 py-2.5 text-sm font-bold uppercase tracking-wide rounded-full hover:bg-white transition shadow-md leading-none">
           Shop 15% OFF
         </a>
       </div>

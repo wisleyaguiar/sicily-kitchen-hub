@@ -6,8 +6,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.52_0.18_148_/_0.18),_transparent_60%),radial-gradient(ellipse_at_bottom_left,_oklch(0.58_0.22_27_/_0.15),_transparent_55%)]" />
       <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <div>
-          <span className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-[var(--brand-cream)]" /> Prodotto in Italia, Sicilia
+          <span className="inline-flex items-center gap-2 bg-brand-ink text-brand-cream px-5 py-2 rounded-full text-xs md:text-sm font-extrabold uppercase tracking-widest shadow-md leading-none">
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" /> Prodotto in Italia, Sicilia
           </span>
           <h1 className="mt-6 text-5xl md:text-7xl leading-[0.95] uppercase text-primary">
             New Cooking<br/>
@@ -23,10 +23,10 @@ export default function HeroSection() {
             From ordinary to <em className="not-italic text-primary">unforgettable.</em>
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#shop" className="bg-primary text-primary-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full shadow-[var(--shadow-bold)] hover:scale-[1.03] transition">
+            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full shadow-[var(--shadow-bold)] hover:scale-[1.03] transition leading-none">
               Get the Kit — 15% OFF
             </a>
-            <a href="#why" className="border-2 border-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition">
+            <a href="#why" className="inline-flex items-center justify-center border-2 border-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none">
               Watch the story
             </a>
           </div>
@@ -48,34 +48,11 @@ export default function HeroSection() {
             className="w-full aspect-[4/3] md:aspect-[4/5] object-cover block rounded-3xl shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
           />
 
-          {/* Green starburst seal — authentic zigzag, centered text */}
-          <div className="absolute -top-6 -right-4 md:-top-10 md:-right-10 z-10 w-40 h-40 md:w-52 md:h-52 rotate-[-8deg] drop-shadow-[0_14px_24px_rgba(0,0,0,0.25)] animate-float">
-            <svg viewBox="-110 -110 220 220" className="absolute inset-0 w-full h-full" aria-hidden>
-              {(() => {
-                const points = 24;
-                const make = (rOuter: number, rInner: number) => {
-                  const pts: string[] = [];
-                  for (let i = 0; i < points * 2; i++) {
-                    const r = i % 2 === 0 ? rOuter : rInner;
-                    const a = (Math.PI / points) * i - Math.PI / 2;
-                    pts.push(`${(Math.cos(a) * r).toFixed(2)},${(Math.sin(a) * r).toFixed(2)}`);
-                  }
-                  return pts.join(" ");
-                };
-                return (
-                  <>
-                    <polygon points={make(100, 82)} fill="var(--brand-green-dark)" />
-                    <polygon points={make(94, 76)} fill="var(--brand-cream)" />
-                    <polygon points={make(86, 70)} fill="var(--brand-green)" />
-                  </>
-                );
-              })()}
-            </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-[var(--brand-cream)] leading-none text-center">
-              <span className="ciao-script text-2xl md:text-3xl">save</span>
-              <span className="font-display text-[40px] md:text-[54px] tracking-tight mt-1">15%</span>
-              <span className="font-display text-sm md:text-lg tracking-[0.3em] mt-1">OFF</span>
-            </div>
+          {/* Green circular badge — clean on-brand circle, centered text */}
+          <div className="absolute -top-6 -right-4 md:-top-8 md:-right-8 z-10 w-28 h-28 md:w-36 md:h-36 rounded-full bg-secondary text-secondary-foreground border-4 border-foreground flex flex-col items-center justify-center text-center shadow-[var(--shadow-bold)]">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-90">save</span>
+            <span className="font-display text-3xl md:text-5xl tracking-tight mt-0.5 leading-none">15%</span>
+            <span className="font-display text-xs md:text-sm tracking-[0.2em] mt-0.5 leading-none">OFF</span>
           </div>
         </div>
       </div>

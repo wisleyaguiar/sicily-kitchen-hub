@@ -39,9 +39,9 @@ function ProductCard({ p }: { p: Product }) {
             className="absolute top-3 left-3 h-20 w-20 md:h-24 md:w-24 object-contain z-20 drop-shadow-md pointer-events-none"
           />
         ) : p.badge === "Best Seller" ? (
-          <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-2 rounded-full z-10 shadow-md">{p.badge}</span>
+          <span className="absolute top-3 left-3 inline-flex items-center justify-center bg-primary text-primary-foreground text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-2 rounded-full z-10 shadow-md leading-none">{p.badge}</span>
         ) : (
-          <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10">{p.badge}</span>
+          <span className="absolute top-3 left-3 inline-flex items-center justify-center bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10 leading-none">{p.badge}</span>
         )}
         <img src={p.img} alt={p.title} className={`h-full w-full object-contain p-2 scale-125 group-hover:scale-[1.35] transition ${p.objectClass ?? ""}`} />
       </div>
@@ -52,7 +52,7 @@ function ProductCard({ p }: { p: Product }) {
         </div>
         <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-[var(--font-mono)]">{p.size}</p>
         <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
-        <button className="mt-4 w-full bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition">
+        <button className="mt-4 w-full inline-flex items-center justify-center bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none">
           Add to cart
         </button>
       </div>

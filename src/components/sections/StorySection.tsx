@@ -1,7 +1,8 @@
 import ciaoFullLogo from "@/assets/ciao-full-logo.png";
-import packshot from "@/assets/ciao-packshot.jpg";
+import finishingExploded from "@/assets/500_FINISHING_AF_BG_ZERO.png";
 import pastaTable from "@/assets/ciao-pasta-table.jpg";
 import saladLandscape from "@/assets/ciao-salad-landscape.jpg";
+import sicilyEtna from "@/assets/sicily-etna.png";
 
 export default function StorySection() {
   return (
@@ -9,16 +10,18 @@ export default function StorySection() {
       {/* PREMIUM. REAL ORIGIN. EVERYDAY USE. */}
       <section className="py-12 px-5 bg-background">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.05fr] gap-6 md:gap-8 items-center">
-          <div className="relative flex flex-col items-center justify-center overflow-hidden">
+          <div className="relative flex items-center justify-center min-h-[380px] md:min-h-[460px] overflow-hidden">
+            {/* Logo/Globe behind the bottle */}
             <img
               src={ciaoFullLogo}
-              alt="CIAO! Extra Virgin Olive Oil — Prodotto in Italia, Sicilia"
-              className="w-2/3 md:w-3/5 h-auto object-contain mb-0"
+              alt=""
+              className="absolute w-[80%] md:w-[70%] h-auto object-contain opacity-20 select-none pointer-events-none z-0"
             />
+            {/* Exploded product in the foreground */}
             <img
-              src={packshot}
-              alt="CIAO! Sicilian EVOO full packshot — cooking, finishing and infused range"
-              className="w-full h-auto object-contain drop-shadow-[0_30px_40px_rgba(0,0,0,0.25)] -mt-2 md:-mt-4"
+              src={finishingExploded}
+              alt="CIAO! Sicilian EVOO bottle — 500ml Finishing Extra Virgin Olive Oil"
+              className="relative z-10 w-auto h-[320px] md:h-[400px] object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.18)] hover:scale-[1.03] transition duration-500"
             />
           </div>
           <div className="relative z-10">
@@ -47,7 +50,7 @@ export default function StorySection() {
               ))}
             </ul>
             <p className="mt-10 ciao-script text-3xl text-primary">Use better olive oil every day.</p>
-            <a href="#shop" className="inline-block mt-8 md:mt-12 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-[var(--brand-red-dark)] transition">
+            <a href="#shop" className="inline-flex items-center justify-center mt-8 md:mt-12 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none">
               Choose my CIAO! now
             </a>
           </div>
@@ -57,8 +60,17 @@ export default function StorySection() {
       <div className="h-6 checker-band" />
 
       {/* TRUTH ABOUT OLIVE OIL */}
-      <section className="py-12 px-5 bg-foreground text-background">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-12 px-5 bg-foreground text-background relative overflow-hidden">
+        {/* Background Image with warm tone and darkening overlay */}
+        <div className="absolute inset-0 z-0 select-none pointer-events-none">
+          <img
+            src={sicilyEtna}
+            alt=""
+            className="w-full h-full object-cover brightness-[0.25] sepia-[0.15] saturate-[1.1] contrast-[1.05]"
+          />
+          <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-secondary">The Truth</span>
             <h2 className="mt-3 text-4xl md:text-6xl uppercase">About Olive Oil</h2>
@@ -106,11 +118,11 @@ export default function StorySection() {
               </div>
             ))}
           </div>
-          <div className="bg-foreground text-background rounded-3xl p-10 grid md:grid-cols-2 gap-8 items-center">
+          <div className="bg-[var(--brand-combines-bg)] text-background rounded-3xl p-10 grid md:grid-cols-2 gap-8 items-center border-4 border-foreground shadow-[var(--shadow-card)]">
             <div>
               <h3 className="text-3xl md:text-4xl uppercase">CIAO! combines</h3>
               <p className="mt-2 text-background/70">Here, you don't just buy olive oil. You bring the real taste of Sicily into your everyday routine.</p>
-              <a href="#shop" className="inline-block mt-6 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-secondary transition">
+              <a href="#shop" className="inline-flex items-center justify-center mt-6 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-secondary transition leading-none">
                 Shop with discount
               </a>
             </div>
@@ -144,7 +156,7 @@ export default function StorySection() {
               <li>→ A ready-made pizza becomes gourmet.</li>
               <li>→ Artisan bread becomes a ritual.</li>
             </ul>
-            <a href="#shop" className="inline-block mt-8 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground transition">
+            <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground transition leading-none">
               I want more flavor
             </a>
           </div>
@@ -189,7 +201,7 @@ export default function StorySection() {
             ))}
           </ul>
           <div className="text-center mt-10">
-            <a href="#shop" className="inline-block bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground transition">
+            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground transition leading-none">
               Try CIAO! with 15% OFF
             </a>
           </div>
@@ -208,7 +220,7 @@ export default function StorySection() {
               "Loves Italian food","Cooks at home","Premium ingredients","Eat better every day",
               "Values organic","Hosts friends & family","Appreciates design","Tasteful gifting","Turns simple into special",
             ].map(x=>(
-              <span key={x} className="bg-background border-2 border-foreground rounded-full px-5 py-2.5 text-sm font-bold uppercase tracking-wide hover:bg-primary hover:text-primary-foreground hover:border-primary transition">
+              <span key={x} className="inline-flex items-center justify-center bg-background border-2 border-foreground rounded-full px-5 py-2.5 text-sm font-bold uppercase tracking-wide hover:bg-primary hover:text-primary-foreground hover:border-primary transition leading-none">
                 {x}
               </span>
             ))}
@@ -216,7 +228,7 @@ export default function StorySection() {
           <p className="mt-10 text-lg text-muted-foreground max-w-xl mx-auto">
             If you believe good food starts with good ingredients, <strong className="text-foreground">CIAO! is for you.</strong>
           </p>
-          <a href="#shop" className="inline-block mt-6 bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition">
+          <a href="#shop" className="inline-flex items-center justify-center mt-6 bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none">
             Bring CIAO! to my kitchen
           </a>
         </div>
@@ -250,7 +262,7 @@ export default function StorySection() {
                 CIAO! is made to be <strong>used, displayed and remembered.</strong>
               </p>
             </div>
-            <a href="#shop" className="relative z-10 inline-block mt-6 bg-background text-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition self-start shadow-[0_8px_24px_rgba(0,0,0,0.35)]">
+            <a href="#shop" className="relative z-10 inline-flex items-center justify-center mt-6 bg-background text-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition self-start shadow-[0_8px_24px_rgba(0,0,0,0.35)] leading-none">
               Choose CIAO! now
             </a>
           </div>

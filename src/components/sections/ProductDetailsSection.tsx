@@ -4,6 +4,7 @@ import truffleContext from "@/assets/Truffle_Context.png";
 import chiliContext from "@/assets/Chili_Context.png";
 import rosemaryContext from "@/assets/Rosemary_Context.png";
 import basilContext from "@/assets/Basil_Context.png";
+import kitchenSet from "@/assets/kitchen-set.png";
 
 export default function ProductDetailsSection() {
   return (
@@ -30,19 +31,37 @@ export default function ProductDetailsSection() {
                 <img
                   src={finishingTable}
                   alt="CIAO! Finishing — green squeeze bottle on a Sicilian table with burrata, bread, pasta and pizza"
-                  className="h-80 w-full object-cover object-center rounded-2xl"
+                  className="h-80 w-full object-cover rounded-2xl"
+                  style={{ objectPosition: "0 -102px" }}
                 />
               </div>
               <h3 className="text-3xl uppercase text-primary">CIAO! Finishing</h3>
               <p className="mt-3 text-muted-foreground">For using after the dish is ready. Perfect for pasta, pizza, salads, bread, eggs, vegetables, meats, fish, bowls and soups.</p>
             </article>
           </div>
-          <div className="mt-10 text-center bg-primary text-primary-foreground rounded-3xl p-10 border-4 border-foreground">
-            <h3 className="text-3xl md:text-4xl uppercase">The Kitchen Set</h3>
-            <p className="mt-2 text-lg opacity-90">Cooking + Finishing. The most complete way to live the CIAO! experience.</p>
-            <a href="#shop" className="inline-block mt-6 bg-background text-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition">
-              Shop the Kitchen Set
-            </a>
+          <div className="mt-12 bg-primary text-primary-foreground rounded-3xl border-4 border-foreground p-8 md:p-10 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_70%_120%,_white,_transparent_50%)]" />
+            <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+              <div className="text-center md:text-left">
+                <h3 className="text-3xl md:text-5xl uppercase leading-none">The Kitchen Set</h3>
+                <p className="mt-4 text-base md:text-lg opacity-95 max-w-md">
+                  Cooking + Finishing. The most complete way to live the CIAO! experience. One for the pan, one for the plate.
+                </p>
+                <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-background text-foreground px-8 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition shadow-lg leading-none">
+                  Shop the Kitchen Set
+                </a>
+              </div>
+              <div className="relative flex justify-center items-center h-[260px] md:h-[300px]">
+                {/* Visual backdrop */}
+                <div className="absolute w-48 h-48 md:w-56 md:h-56 rounded-full bg-secondary border-4 border-foreground z-0 shadow-inner" />
+                {/* Popping product image */}
+                <img
+                  src={kitchenSet}
+                  alt="CIAO! Kitchen Set — Cooking and Finishing bottles together"
+                  className="relative z-10 max-h-[110%] w-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.22)] hover:scale-[1.05] transition duration-500"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -76,7 +95,7 @@ export default function ProductDetailsSection() {
           </div>
           <p className="text-center mt-10 text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
           <div className="text-center mt-6">
-            <a href="#shop" className="inline-block bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition">
+            <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none">
               View Infused Oils & Gift Packs
             </a>
           </div>
