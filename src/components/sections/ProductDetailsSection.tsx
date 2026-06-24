@@ -48,7 +48,7 @@ export default function ProductDetailsSection() {
                   Cooking + Finishing. The most complete way to live the CIAO! experience. One for the pan, one for the plate.
                 </p>
                 <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-background text-foreground px-8 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition shadow-lg leading-none">
-                  Shop the Kitchen Set
+                  <span className="h-2.5">Shop the Kitchen Set</span>
                 </a>
               </div>
               <div className="relative flex justify-center items-center h-[260px] md:h-[300px]">
@@ -96,7 +96,7 @@ export default function ProductDetailsSection() {
           <p className="text-center mt-10 text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
           <div className="text-center mt-6">
             <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none">
-              View Infused Oils & Gift Packs
+              <span className="h-2.5">View Infused Oils & Gift Packs</span>
             </a>
           </div>
         </div>

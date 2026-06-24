@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <div>
           <span className="inline-flex items-center gap-2 bg-brand-ink text-brand-cream px-5 py-2 rounded-full text-xs md:text-sm font-extrabold uppercase tracking-widest shadow-md leading-none">
-            <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" /> Prodotto in Italia, Sicilia
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" /> <span className="h-2.5">Prodotto in Italia, Sicilia</span>
           </span>
           <h1 className="mt-6 text-5xl md:text-7xl leading-[0.95] uppercase text-primary">
             New Cooking<br/>
@@ -24,10 +24,10 @@ export default function HeroSection() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full shadow-[var(--shadow-bold)] hover:scale-[1.03] transition leading-none">
-              Get the Kit — 15% OFF
+              <span className="h-2.5">Get the Kit — 15% OFF</span>
             </a>
             <a href="#why" className="inline-flex items-center justify-center border-2 border-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none">
-              Watch the story
+              <span className="h-2.5">Watch the story</span>
             </a>
           </div>
           <ul className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-sm font-medium font-[var(--font-mono)]">

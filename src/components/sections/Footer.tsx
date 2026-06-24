@@ -15,7 +15,7 @@ export default function Footer() {
             From the pan to the plate. From ordinary to unforgettable.
           </p>
           <a href="#shop" className="inline-flex items-center justify-center mt-10 bg-background text-foreground px-9 py-5 font-bold uppercase tracking-wide rounded-full text-lg hover:bg-foreground hover:text-background transition shadow-2xl leading-none">
-            Shop CIAO! with 15% OFF
+            <span className="h-2.5">Shop CIAO! with 15% OFF</span>
           </a>
         </div>
       </section>
