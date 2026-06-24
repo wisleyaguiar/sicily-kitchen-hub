@@ -36,11 +36,7 @@ function ProductCard({ p }: { p: Product }) {
           <img
             src={p.badgeIcon}
             alt={p.badge}
-            className={`absolute object-contain z-20 drop-shadow-md pointer-events-none ${
-              p.badgeIconWide
-                ? "-top-2 -left-3 w-32 md:w-40 h-auto"
-                : "top-1 left-1 h-20 w-20 md:h-24 md:w-24"
-            }`}
+            className="absolute top-3 left-3 h-20 w-20 md:h-24 md:w-24 object-contain z-20 drop-shadow-md pointer-events-none"
           />
         ) : p.badge === "Best Seller" ? (
           <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-2 rounded-full z-10 shadow-md">{p.badge}</span>
@@ -67,8 +63,8 @@ function ProductCard({ p }: { p: Product }) {
 export default function ShopSection() {
   const evoo = [
     { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: kitchenDuo, badge: "Best Seller", price: "$37.99", objectClass: "scale-110 group-hover:scale-[1.18]" },
-    { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat, badge: "Finishing", badgeIcon: iconFinishing, badgeIconWide: true, price: "$22.99" },
-    { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat, badge: "Cooking", badgeIcon: iconCooking, badgeIconWide: true, price: "$17.99" },
+    { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat, badge: "Finishing", badgeIcon: iconFinishing, price: "$22.99" },
+    { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat, badge: "Cooking", badgeIcon: iconCooking, price: "$17.99" },
   ];
   const infused100 = [
     { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100, badge: "Truffle", badgeIcon: iconTruffle, price: "$12.99" },

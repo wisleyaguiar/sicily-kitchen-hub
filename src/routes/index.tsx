@@ -33,9 +33,7 @@ function Index() {
       <WhyCiaoSection />
       <div className="h-6 checker-band" />
       <StorySection />
-      <div className="h-6 checker-band" />
       <ProductDetailsSection />
-      <div className="h-6 checker-band" />
       <ShopSection />
       <div className="h-6 checker-band" />
       <FaqSection />

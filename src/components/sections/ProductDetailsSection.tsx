@@ -19,7 +19,7 @@ export default function ProductDetailsSection() {
             <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-6 checker-band" />
               <div className="flex justify-center my-8 pt-4">
-                <img src={ciaoCooking} alt="CIAO! Cooking — yellow squeeze bottle in a kitchen scene" className="h-80 w-full object-cover rounded-2xl" />
+                <img src={ciaoCooking} alt="CIAO! Cooking — yellow squeeze bottle in a kitchen scene" className="h-80 w-full object-cover object-center rounded-2xl" />
               </div>
               <h3 className="text-3xl uppercase text-primary">CIAO! Cooking</h3>
               <p className="mt-3 text-muted-foreground">For everyday cooking with real extra virgin olive oil. Perfect for preparing recipes, grilling, sautéing and elevating the quality of your food from the very beginning.</p>
@@ -30,8 +30,7 @@ export default function ProductDetailsSection() {
                 <img
                   src={finishingTable}
                   alt="CIAO! Finishing — green squeeze bottle on a Sicilian table with burrata, bread, pasta and pizza"
-                  className="h-80 w-full object-cover rounded-2xl"
-                  style={{ objectPosition: "center 18%" }}
+                  className="h-80 w-full object-cover object-center rounded-2xl"
                 />
               </div>
               <h3 className="text-3xl uppercase text-primary">CIAO! Finishing</h3>
