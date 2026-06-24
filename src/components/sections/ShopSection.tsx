@@ -26,12 +26,13 @@ type Product = {
   badgeIconWide?: boolean;
   price: string;
   objectClass?: string;
+  aspectClass?: string;
 };
 
 function ProductCard({ p }: { p: Product }) {
   return (
-    <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group">
-      <div className="aspect-square bg-white flex items-center justify-center overflow-hidden relative">
+    <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group flex flex-col h-full">
+      <div className={`bg-white flex items-center justify-center overflow-hidden relative ${p.aspectClass ?? "aspect-square"}`}>
         {p.badgeIcon ? (
           <img
             src={p.badgeIcon}
@@ -39,20 +40,20 @@ function ProductCard({ p }: { p: Product }) {
             className="absolute top-3 left-3 h-20 w-20 md:h-24 md:w-24 object-contain z-20 drop-shadow-md pointer-events-none"
           />
         ) : p.badge === "Best Seller" ? (
-          <span className="absolute top-3 left-3 inline-flex items-center justify-center bg-primary text-primary-foreground text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-2 rounded-full z-10 shadow-md leading-none">{p.badge}</span>
+          <span className="absolute top-3 left-3 inline-flex items-center justify-center bg-primary text-primary-foreground text-xs md:text-sm font-extrabold uppercase tracking-widest px-4 py-2 rounded-full z-10 shadow-md leading-none"><span className="h-2.5">{p.badge}</span></span>
         ) : (
-          <span className="absolute top-3 left-3 inline-flex items-center justify-center bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10 leading-none">{p.badge}</span>
+          <span className="absolute top-3 left-3 inline-flex items-center justify-center bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full z-10 leading-none"><span className="h-2.5">{p.badge}</span></span>
         )}
-        <img src={p.img} alt={p.title} className={`h-full w-full object-contain p-2 scale-125 group-hover:scale-[1.35] transition ${p.objectClass ?? ""}`} />
+        <img src={p.img} alt={p.title} className={`h-full w-full object-contain p-2 transition ${p.objectClass ?? "scale-125 group-hover:scale-[1.35]"}`} />
       </div>
-      <div className="p-5">
+      <div className="p-5 flex-1 flex flex-col">
         <div className="flex items-baseline justify-between gap-2">
           <h3 className="text-xl uppercase">{p.title}</h3>
           <span className="text-primary font-bold whitespace-nowrap">{p.price}</span>
         </div>
         <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-[var(--font-mono)]">{p.size}</p>
         <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
-        <button className="mt-4 w-full inline-flex items-center justify-center bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none">
+        <button className="mt-auto pt-4 w-full inline-flex items-center justify-center bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none">
           Add to cart
         </button>
       </div>
@@ -62,21 +63,21 @@ function ProductCard({ p }: { p: Product }) {
 
 export default function ShopSection() {
   const evoo = [
-    { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: kitchenDuo, badge: "Best Seller", price: "$37.99", objectClass: "scale-110 group-hover:scale-[1.18]" },
-    { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat, badge: "Finishing", badgeIcon: iconFinishing, price: "$22.99" },
-    { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat, badge: "Cooking", badgeIcon: iconCooking, price: "$17.99" },
+    { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: kitchenDuo, badge: "Best Seller", price: "$37.99", objectClass: "scale-110 group-hover:scale-[1.18]", aspectClass: "aspect-[1600/1360]" },
+    { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat, badge: "Finishing", badgeIcon: iconFinishing, price: "$22.99", objectClass: "scale-90 group-hover:scale-95", aspectClass: "aspect-[1600/1360]" },
+    { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat, badge: "Cooking", badgeIcon: iconCooking, price: "$17.99", objectClass: "scale-90 group-hover:scale-95", aspectClass: "aspect-[1600/1360]" },
   ];
   const infused100 = [
-    { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100, badge: "Truffle", badgeIcon: iconTruffle, price: "$12.99" },
-    { title: "Infused — Basil", size: "100ml · 3.38 fl oz", desc: "Fresh Italian basil EVOO.", img: basil100, badge: "Basil", badgeIcon: iconBasil, price: "$12.99" },
-    { title: "Infused — Chili", size: "100ml · 3.38 fl oz", desc: "A bold Sicilian kick.", img: chili100, badge: "Chili", badgeIcon: iconChili, price: "$12.99" },
-    { title: "Infused — Rosemary", size: "100ml · 3.38 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemary100, badge: "Rosemary", badgeIcon: iconRosemary, price: "$12.99" },
+    { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100, badge: "Truffle", badgeIcon: iconTruffle, price: "$12.99", objectClass: "scale-90 group-hover:scale-95" },
+    { title: "Infused — Basil", size: "100ml · 3.38 fl oz", desc: "Fresh Italian basil EVOO.", img: basil100, badge: "Basil", badgeIcon: iconBasil, price: "$12.99", objectClass: "scale-90 group-hover:scale-95" },
+    { title: "Infused — Chili", size: "100ml · 3.38 fl oz", desc: "A bold Sicilian kick.", img: chili100, badge: "Chili", badgeIcon: iconChili, price: "$12.99", objectClass: "scale-90 group-hover:scale-95" },
+    { title: "Infused — Rosemary", size: "100ml · 3.38 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemary100, badge: "Rosemary", badgeIcon: iconRosemary, price: "$12.99", objectClass: "scale-90 group-hover:scale-95" },
   ];
   const infused250 = [
-    { title: "Infused — Truffle", size: "250ml · 8.45 fl oz", desc: "Rich, indulgent, gourmet.", img: truffleFlat, badge: "250ml", badgeIcon: iconTruffle, price: "$19.99" },
-    { title: "Infused — Basil", size: "250ml · 8.45 fl oz", desc: "Fresh Italian basil EVOO.", img: basilFlat, badge: "250ml", badgeIcon: iconBasil, price: "$19.99" },
-    { title: "Infused — Chili", size: "250ml · 8.45 fl oz", desc: "A bold Sicilian kick.", img: chiliFlat, badge: "250ml", badgeIcon: iconChili, price: "$19.99" },
-    { title: "Infused — Rosemary", size: "250ml · 8.45 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemaryFlat, badge: "250ml", badgeIcon: iconRosemary, price: "$19.99" },
+    { title: "Infused — Truffle", size: "250ml · 8.45 fl oz", desc: "Rich, indulgent, gourmet.", img: truffleFlat, badge: "250ml", badgeIcon: iconTruffle, price: "$19.99", objectClass: "scale-90 group-hover:scale-95" },
+    { title: "Infused — Basil", size: "250ml · 8.45 fl oz", desc: "Fresh Italian basil EVOO.", img: basilFlat, badge: "250ml", badgeIcon: iconBasil, price: "$19.99", objectClass: "scale-90 group-hover:scale-95" },
+    { title: "Infused — Chili", size: "250ml · 8.45 fl oz", desc: "A bold Sicilian kick.", img: chiliFlat, badge: "250ml", badgeIcon: iconChili, price: "$19.99", objectClass: "scale-90 group-hover:scale-95" },
+    { title: "Infused — Rosemary", size: "250ml · 8.45 fl oz", desc: "Herbal, aromatic, Mediterranean.", img: rosemaryFlat, badge: "250ml", badgeIcon: iconRosemary, price: "$19.99", objectClass: "scale-90 group-hover:scale-95" },
   ];
 
   return (
