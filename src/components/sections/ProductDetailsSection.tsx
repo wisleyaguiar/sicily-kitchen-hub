@@ -75,13 +75,17 @@ export default function ProductDetailsSection() {
 
       {/* INFUSED OILS */}
       <section id="infused" className="py-12 px-5 bg-[var(--brand-cream)]">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.15fr_1fr] gap-10 items-center">
-          {/* Left Column: Title + 4 Infusions + CTA */}
-          <div className="flex flex-col">
-            <div className="text-center md:text-left mb-10">
-              <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Infused Oils + Gift Packs</span>
-              <h2 className="mt-3 text-4xl md:text-5xl uppercase leading-[1.1]">More flavor in seconds.</h2>
-            </div>
+        <div className="max-w-6xl mx-auto flex flex-col items-center">
+          
+          {/* 1. Header (Centered across entire section) */}
+          <div className="text-center mb-10">
+            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Infused Oils + Gift Packs</span>
+            <h2 className="mt-3 text-4xl md:text-5xl uppercase leading-[1.1]">More flavor in seconds.</h2>
+          </div>
+
+          {/* 2. Middle Block (2 columns: 2x2 grid on left, gift pack image on right) */}
+          <div className="w-full grid md:grid-cols-[1.15fr_1fr] gap-6">
+            {/* Left: 4 Infusions Grid */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 { name: "Truffle", img: truffleContext, icon: iconTruffle, note: "Rich, indulgent, gourmet.", tint: "bg-foreground text-background" },
@@ -101,21 +105,25 @@ export default function ProductDetailsSection() {
                 </article>
               ))}
             </div>
-            <p className="text-center md:text-left mt-8 text-sm md:text-base text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
-            <div className="text-center md:text-left mt-6">
-              <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none btn-pulse-black">
-                <span className="h-2.5">View Infused Oils & Gift Packs</span>
-              </a>
+            
+            {/* Right: Gift Pack Image (Matches height of left grid) */}
+            <div className="relative order-2 md:order-none mt-6 md:mt-0 flex">
+              <img
+                src={ciaoPackshot}
+                alt="CIAO! Infused Oils Gift Pack — Truffle, Chili, Rosemary and Basil set"
+                className="w-full h-full object-cover rounded-3xl border-4 border-foreground shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
+              />
             </div>
           </div>
-          {/* Right Column: Gift Pack Image */}
-          <div className="relative flex justify-center items-center order-2 md:order-none mt-6 md:mt-0">
-            <img
-              src={ciaoPackshot}
-              alt="CIAO! Infused Oils Gift Pack — Truffle, Chili, Rosemary and Basil set"
-              className="w-full max-w-[420px] md:max-w-none aspect-[4/5] object-cover rounded-3xl border-4 border-foreground shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
-            />
+
+          {/* 3. Footer (Centered across entire section) */}
+          <p className="text-center mt-10 text-sm md:text-base text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
+          <div className="text-center mt-6">
+            <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none btn-pulse-black">
+              <span className="h-2.5">View Infused Oils & Gift Packs</span>
+            </a>
           </div>
+
         </div>
       </section>
     </>

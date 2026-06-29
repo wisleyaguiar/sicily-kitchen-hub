@@ -16,6 +16,12 @@ import iconRosemary from "@/assets/icon-rosemary.png";
 import iconChili from "@/assets/icon-chili.png";
 import iconTruffle from "@/assets/icon-truffle.png";
 
+// v2 Assets
+import finishingFlatV2 from "@/assets/ciao-finishing-flat-v2.png";
+import cookingFlatV2 from "@/assets/ciao-cooking-flat-v2.png";
+import iconFinishingV2 from "@/assets/icon-finishing-v2.png";
+import iconCookingV2 from "@/assets/icon-cooking-v2.png";
+
 type Product = {
   title: string;
   size: string;
@@ -37,10 +43,10 @@ function ProductCard({ p }: { p: Product }) {
           <img
             src={p.badgeIcon}
             alt={p.badge}
-            className={`absolute object-contain z-20 drop-shadow-md pointer-events-none ${
+            className={`absolute z-20 drop-shadow-md pointer-events-none ${
               p.badgeIconWide
-                ? "top-3 left-3 w-28 md:w-36 h-auto"
-                : "top-3 left-3 h-20 w-20 md:h-24 md:w-24"
+                ? "top-3 left-3 w-28 md:w-36 h-auto object-contain"
+                : "top-3 left-3 h-20 w-20 md:h-24 md:w-24 object-contain"
             }`}
           />
         ) : p.badge === "Best Seller" ? (
@@ -68,8 +74,8 @@ function ProductCard({ p }: { p: Product }) {
 export default function ShopSection() {
   const evoo = [
     { title: "Kitchen Set", size: "750ml + 500ml", desc: "Cooking + Finishing. The full experience.", img: kitchenDuo, badge: "Best Seller", price: "$37.99", objectClass: "scale-110 group-hover:scale-[1.18]", aspectClass: "aspect-[1600/1360]" },
-    { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlat, badge: "Finishing", badgeIcon: iconFinishing, badgeIconWide: true, price: "$22.99", objectClass: "scale-110 group-hover:scale-[1.18]", aspectClass: "aspect-[1600/1360]" },
-    { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlat, badge: "Cooking", badgeIcon: iconCooking, badgeIconWide: true, price: "$17.99", objectClass: "scale-110 group-hover:scale-[1.18]", aspectClass: "aspect-[1600/1360]" },
+    { title: "Finishing EVOO", size: "500ml · 16.9 fl oz", desc: "The final drizzle for any dish.", img: finishingFlatV2, badge: "Finishing", badgeIcon: iconFinishingV2, badgeIconWide: true, price: "$22.99", objectClass: "scale-100 group-hover:scale-105", aspectClass: "aspect-[360/306]" },
+    { title: "Cooking EVOO", size: "750ml · 25.4 fl oz", desc: "Premium everyday extra virgin.", img: cookingFlatV2, badge: "Cooking", badgeIcon: iconCookingV2, badgeIconWide: true, price: "$17.99", objectClass: "scale-100 group-hover:scale-105", aspectClass: "aspect-[360/306]" },
   ];
   const infused100 = [
     { title: "Infused — Truffle", size: "100ml · 3.38 fl oz", desc: "Rich, indulgent, gourmet.", img: truffle100, badge: "Truffle", badgeIcon: iconTruffle, price: "$12.99", objectClass: "scale-110 group-hover:scale-[1.18]" },
