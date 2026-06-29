@@ -5,6 +5,11 @@ import chiliContext from "@/assets/Chili_Context.png";
 import rosemaryContext from "@/assets/Rosemary_Context.png";
 import basilContext from "@/assets/Basil_Context.png";
 import kitchenSet from "@/assets/kitchen-set.png";
+import ciaoPackshot from "@/assets/ciao-packshot.jpg";
+import iconTruffle from "@/assets/icon-truffle.png";
+import iconChili from "@/assets/icon-chili.png";
+import iconRosemary from "@/assets/icon-rosemary.png";
+import iconBasil from "@/assets/icon-basil.png";
 
 export default function ProductDetailsSection() {
   return (
@@ -47,7 +52,7 @@ export default function ProductDetailsSection() {
                 <p className="mt-4 text-base md:text-lg opacity-95 max-w-md">
                   Cooking + Finishing. The most complete way to live the CIAO! experience. One for the pan, one for the plate.
                 </p>
-                <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-background text-foreground px-8 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition shadow-lg leading-none">
+                <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-background text-foreground px-8 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition shadow-lg leading-none btn-pulse-white">
                   <span className="h-2.5">Shop the Kitchen Set</span>
                 </a>
               </div>
@@ -70,34 +75,46 @@ export default function ProductDetailsSection() {
 
       {/* INFUSED OILS */}
       <section id="infused" className="py-12 px-5 bg-[var(--brand-cream)]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Infused Oils + Gift Packs</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase">More flavor in seconds.</h2>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.15fr_1fr] gap-10 items-center">
+          {/* Left Column: Title + 4 Infusions + CTA */}
+          <div className="flex flex-col">
+            <div className="text-center md:text-left mb-10">
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Infused Oils + Gift Packs</span>
+              <h2 className="mt-3 text-4xl md:text-5xl uppercase leading-[1.1]">More flavor in seconds.</h2>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { name: "Truffle", img: truffleContext, icon: iconTruffle, note: "Rich, indulgent, gourmet.", tint: "bg-foreground text-background" },
+                { name: "Chili",   img: chiliContext,   icon: iconChili,   note: "A bold Sicilian kick.",     tint: "bg-primary text-primary-foreground" },
+                { name: "Rosemary",img: rosemaryContext,icon: iconRosemary,note: "Aromatic & herbal.",        tint: "bg-[oklch(0.85_0.06_85)] text-foreground" },
+                { name: "Basil",   img: basilContext,   icon: iconBasil,   note: "Fresh Italian basil.",      tint: "bg-secondary text-secondary-foreground" },
+              ].map(p=>(
+                <article key={p.name} className={`${p.tint} rounded-3xl overflow-hidden border-4 border-foreground hover:-translate-y-1 transition relative min-w-[140px] sm:min-w-[160px]`}>
+                  <div className="aspect-square overflow-hidden relative min-h-[120px]">
+                    <img src={p.icon} alt="" className="absolute top-2 left-2 w-8 h-8 md:w-10 md:h-10 object-contain z-10 drop-shadow-md pointer-events-none" />
+                    <img src={p.img} alt={`${p.name} infused EVOO`} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="p-4 md:p-5">
+                    <h3 className="text-xl md:text-2xl uppercase leading-none">{p.name}</h3>
+                    <p className="text-xs md:text-sm opacity-90 mt-1.5 leading-tight">{p.note}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="text-center md:text-left mt-8 text-sm md:text-base text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
+            <div className="text-center md:text-left mt-6">
+              <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none btn-pulse-black">
+                <span className="h-2.5">View Infused Oils & Gift Packs</span>
+              </a>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { name: "Truffle", img: truffleContext, note: "Rich, indulgent, gourmet.", tint: "bg-foreground text-background" },
-              { name: "Chili",   img: chiliContext,   note: "A bold Sicilian kick.",     tint: "bg-primary text-primary-foreground" },
-              { name: "Rosemary",img: rosemaryContext,note: "Aromatic & herbal.",        tint: "bg-[oklch(0.85_0.06_85)] text-foreground" },
-              { name: "Basil",   img: basilContext,   note: "Fresh Italian basil.",      tint: "bg-secondary text-secondary-foreground" },
-            ].map(p=>(
-              <article key={p.name} className={`${p.tint} rounded-3xl overflow-hidden border-4 border-foreground hover:-translate-y-1 transition`}>
-                <div className="aspect-square overflow-hidden">
-                  <img src={p.img} alt={`${p.name} infused EVOO`} className="w-full h-full object-cover" />
-                </div>
-                <div className="p-5">
-                  <h3 className="text-2xl uppercase">{p.name}</h3>
-                  <p className="text-sm opacity-90 mt-1">{p.note}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <p className="text-center mt-10 text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
-          <div className="text-center mt-6">
-            <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none">
-              <span className="h-2.5">View Infused Oils & Gift Packs</span>
-            </a>
+          {/* Right Column: Gift Pack Image */}
+          <div className="relative flex justify-center items-center order-2 md:order-none mt-6 md:mt-0">
+            <img
+              src={ciaoPackshot}
+              alt="CIAO! Infused Oils Gift Pack — Truffle, Chili, Rosemary and Basil set"
+              className="w-full max-w-[420px] md:max-w-none aspect-[4/5] object-cover rounded-3xl border-4 border-foreground shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
+            />
           </div>
         </div>
       </section>

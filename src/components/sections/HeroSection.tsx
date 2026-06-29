@@ -23,7 +23,7 @@ export default function HeroSection() {
             From ordinary to <em className="not-italic text-primary">unforgettable.</em>
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full shadow-[var(--shadow-bold)] hover:scale-[1.03] transition leading-none">
+            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full shadow-[var(--shadow-bold)] hover:scale-[1.03] transition leading-none btn-pulse-red">
               <span className="h-2.5">Get the Kit — 15% OFF</span>
             </a>
             <a href="#why" className="inline-flex items-center justify-center border-2 border-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none">

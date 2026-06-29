@@ -35,3 +35,8 @@ dist-ssr
 .netlify
 
 .playwright-mcp/
+
+.lovable/
+.tanstack/
+
+.specs/

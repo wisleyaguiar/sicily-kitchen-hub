@@ -17,7 +17,7 @@ export default function WhyCiaoSection() {
             CIAO! brings this ritual into American kitchens — premium EVOO, bold flavor, modern design, and quality you notice from the very first drizzle. Not just another bottle. A product with <strong className="text-foreground">origin, purity, tradition and personality.</strong>
           </p>
         </div>
-        <a href="#shop" className="inline-flex items-center justify-center mt-10 bg-foreground text-background px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-primary transition leading-none">
+        <a href="#shop" className="inline-flex items-center justify-center mt-10 bg-foreground text-background px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-primary transition leading-none btn-pulse-black">
           <span className="h-2.5">Try CIAO! with 15% OFF</span>
         </a>
       </div>
