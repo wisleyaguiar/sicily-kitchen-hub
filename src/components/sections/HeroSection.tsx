@@ -6,10 +6,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_oklch(0.52_0.18_148_/_0.18),_transparent_60%),radial-gradient(ellipse_at_bottom_left,_oklch(0.58_0.22_27_/_0.15),_transparent_55%)]" />
       <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <div>
-          <span className="inline-flex items-center gap-2 bg-brand-ink text-brand-cream px-5 py-2 rounded-full text-xs md:text-sm font-extrabold uppercase tracking-widest shadow-md leading-none">
-            <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-pulse" /> <span className="h-2.5">Prodotto in Italia, Sicilia</span>
-          </span>
-          <h1 className="mt-6 text-5xl md:text-7xl leading-[0.95] uppercase text-primary">
+          <h1 className="text-5xl md:text-7xl leading-[0.95] uppercase text-primary">
             New Cooking<br/>
             AND Finishing<br/>
             Kit
@@ -22,12 +19,12 @@ export default function HeroSection() {
             From the pan to the plate.<br/>
             From ordinary to <em className="not-italic text-primary">unforgettable.</em>
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full shadow-[var(--shadow-bold)] hover:scale-[1.03] transition leading-none btn-pulse-red">
-              <span className="h-2.5">Get the Kit — 15% OFF</span>
+          <div className="mt-8 flex flex-wrap gap-3 items-center">
+            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full shadow-[var(--shadow-bold)] outline outline-2 outline-offset-2 outline-primary hover:scale-[1.03] transition leading-none btn-pulse-red">
+              <span className="leading-none">Get the Kit — 15% OFF</span>
             </a>
-            <a href="#why" className="inline-flex items-center justify-center border-2 border-foreground px-7 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none">
-              <span className="h-2.5">Watch the story</span>
+            <a href="#why" className="inline-flex items-center justify-center border-2 border-foreground px-8 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none">
+              <span className="leading-none">Watch the story</span>
             </a>
           </div>
           <ul className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-sm font-medium font-[var(--font-mono)]">

@@ -94,8 +94,7 @@ export default function ShopSection() {
     <section id="shop" className="py-12 px-5 bg-primary text-primary-foreground">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
-          <span className="text-base md:text-lg font-extrabold uppercase tracking-[0.3em] text-white">Choose your CIAO!</span>
-          <h2 className="mt-3 text-4xl md:text-6xl uppercase">Bring Sicily to your table</h2>
+          <h2 className="text-4xl md:text-6xl uppercase">Bring Sicily to your table</h2>
         </div>
 
         <h3 className="font-[var(--font-mono)] text-base md:text-lg font-bold uppercase tracking-[0.3em] text-white mb-4">Extra Virgin Olive Oil</h3>

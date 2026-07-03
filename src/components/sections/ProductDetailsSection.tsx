@@ -18,8 +18,7 @@ export default function ProductDetailsSection() {
       <section id="cooking" className="py-12 px-5">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">Cooking + Finishing</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase text-primary">One for the Pan.<br/>One for the Plate.</h2>
+            <h2 className="text-4xl md:text-6xl uppercase text-primary">One for the Pan.<br/>One for the Plate.</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <article className="bg-[var(--brand-cream)] border-4 border-foreground rounded-3xl p-8 relative overflow-hidden">
@@ -52,8 +51,8 @@ export default function ProductDetailsSection() {
                 <p className="mt-4 text-base md:text-lg opacity-95 max-w-md">
                   Cooking + Finishing. The most complete way to live the CIAO! experience. One for the pan, one for the plate.
                 </p>
-                <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-background text-foreground px-8 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition shadow-lg leading-none btn-pulse-white">
-                  <span className="h-2.5">Shop the Kitchen Set</span>
+                <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-background text-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-background hover:bg-foreground hover:text-background hover:outline-foreground transition shadow-lg leading-none btn-pulse-white">
+                  <span className="leading-none">Shop the Kitchen Set</span>
                 </a>
               </div>
               <div className="relative flex justify-center items-center h-[260px] md:h-[300px]">
@@ -79,8 +78,7 @@ export default function ProductDetailsSection() {
           
           {/* 1. Header (Centered across entire section) */}
           <div className="text-center mb-10">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Infused Oils + Gift Packs</span>
-            <h2 className="mt-3 text-4xl md:text-5xl uppercase leading-[1.1]">More flavor in seconds.</h2>
+            <h2 className="text-4xl md:text-5xl uppercase leading-[1.1]">More flavor in seconds.</h2>
           </div>
 
           {/* 2. Middle Block (2 columns: 2x2 grid on left, gift pack image on right) */}
@@ -119,8 +117,8 @@ export default function ProductDetailsSection() {
           {/* 3. Footer (Centered across entire section) */}
           <p className="text-center mt-10 text-sm md:text-base text-muted-foreground">Perfect for pizza night, pasta night, bread, appetizers and special meals at home.</p>
           <div className="text-center mt-6">
-            <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none btn-pulse-black">
-              <span className="h-2.5">View Infused Oils & Gift Packs</span>
+            <a href="#shop" className="inline-flex items-center justify-center bg-foreground text-background px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-foreground hover:bg-primary hover:outline-primary transition leading-none btn-pulse-black">
+              <span className="leading-none">View Infused Oils & Gift Packs</span>
             </a>
           </div>
 

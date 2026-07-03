@@ -19,10 +19,7 @@ export default function StorySection() {
             />
           </div>
           <div className="relative z-10">
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-primary font-[var(--font-mono)]">
-              🔒 Premium · Real Origin · Everyday Use
-            </span>
-            <h2 className="mt-4 text-4xl md:text-5xl uppercase leading-[0.95] text-primary">
+            <h2 className="text-4xl md:text-5xl uppercase leading-[0.95] text-primary">
               More than a regular<br/>grocery store olive oil.
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
@@ -44,8 +41,8 @@ export default function StorySection() {
               ))}
             </ul>
             <p className="mt-10 ciao-script text-3xl text-primary">Use better olive oil every day.</p>
-            <a href="#shop" className="inline-flex items-center justify-center mt-8 md:mt-12 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none btn-pulse-red">
-              <span className="h-2.5">Choose my CIAO! now</span>
+            <a href="#shop" className="inline-flex items-center justify-center mt-8 md:mt-12 bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-primary hover:bg-[var(--brand-red-dark)] hover:outline-[var(--brand-red-dark)] transition leading-none btn-pulse-red">
+              <span className="leading-none">Choose my CIAO! now</span>
             </a>
           </div>
         </div>
@@ -66,8 +63,7 @@ export default function StorySection() {
         </div>
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-secondary">The Truth</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase">About Olive Oil</h2>
+            <h2 className="text-4xl md:text-6xl uppercase">About Olive Oil</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -94,8 +90,7 @@ export default function StorySection() {
       <section className="py-12 px-5 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-secondary">Our Value Proposition</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase leading-[0.95]">
+            <h2 className="text-4xl md:text-6xl uppercase leading-[0.95]">
               Not another bottle.<br/>A <span className="text-primary">complete kitchen experience.</span>
             </h2>
           </div>
@@ -116,8 +111,8 @@ export default function StorySection() {
             <div>
               <h3 className="text-3xl md:text-4xl uppercase">CIAO! combines</h3>
               <p className="mt-2 text-background/70">Here, you don't just buy olive oil. You bring the real taste of Sicily into your everyday routine.</p>
-              <a href="#shop" className="inline-flex items-center justify-center mt-6 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-secondary transition leading-none btn-pulse-red">
-                <span className="h-2.5">Shop with discount</span>
+              <a href="#shop" className="inline-flex items-center justify-center mt-6 bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-primary hover:bg-secondary hover:outline-secondary transition leading-none btn-pulse-red">
+                <span className="leading-none">Shop with discount</span>
               </a>
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-sm">
@@ -135,8 +130,7 @@ export default function StorySection() {
       <section className="py-4 md:py-6 px-5 bg-secondary text-secondary-foreground relative overflow-hidden">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-sm font-bold uppercase tracking-[0.3em] opacity-80 font-[var(--font-mono)]">Manifesto</span>
-            <h2 className="mt-3 text-5xl md:text-7xl uppercase leading-[0.9]">
+            <h2 className="text-5xl md:text-7xl uppercase leading-[0.9]">
               Less Dress.<br/>
               <span className="text-primary">More Drizzle.</span>
             </h2>
@@ -150,8 +144,8 @@ export default function StorySection() {
               <li>→ A ready-made pizza becomes gourmet.</li>
               <li>→ Artisan bread becomes a ritual.</li>
             </ul>
-            <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground transition leading-none btn-pulse-red">
-              <span className="h-2.5">I want more flavor</span>
+            <a href="#shop" className="inline-flex items-center justify-center mt-8 bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-primary hover:bg-foreground hover:outline-foreground transition leading-none btn-pulse-red">
+              <span className="leading-none">I want more flavor</span>
             </a>
           </div>
           <div className="relative flex justify-center items-center">
@@ -170,8 +164,7 @@ export default function StorySection() {
       <section className="py-12 px-5 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">The Proof</span>
-            <h2 className="mt-3 text-4xl md:text-6xl uppercase">Is in the Flavor</h2>
+            <h2 className="text-4xl md:text-6xl uppercase">Is in the Flavor</h2>
             <p className="mt-5 max-w-2xl mx-auto text-muted-foreground">
               People may notice the design first. But when they taste CIAO!, they understand the difference.
             </p>
@@ -195,8 +188,8 @@ export default function StorySection() {
             ))}
           </ul>
           <div className="text-center mt-10">
-            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground transition leading-none btn-pulse-red">
-              <span className="h-2.5">Try CIAO! with 15% OFF</span>
+            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-primary hover:bg-foreground hover:outline-foreground transition leading-none btn-pulse-red">
+              <span className="leading-none">Try CIAO! with 15% OFF</span>
             </a>
           </div>
         </div>
@@ -207,8 +200,7 @@ export default function StorySection() {
       {/* WHO IS CIAO FOR — standalone */}
       <section className="py-12 px-5 bg-[var(--brand-cream)]">
         <div className="max-w-5xl mx-auto text-center">
-          <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Who is CIAO! for?</span>
-          <h2 className="mt-3 text-4xl md:text-6xl uppercase">For people who value<br/>food, quality & experience.</h2>
+          <h2 className="text-4xl md:text-6xl uppercase">For people who value<br/>food, quality & experience.</h2>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             {[
               "Loves Italian food","Cooks at home","Premium ingredients","Eat better every day",
@@ -222,8 +214,8 @@ export default function StorySection() {
           <p className="mt-10 text-lg text-muted-foreground max-w-xl mx-auto">
             If you believe good food starts with good ingredients, <strong className="text-foreground">CIAO! is for you.</strong>
           </p>
-          <a href="#shop" className="inline-flex items-center justify-center mt-6 bg-foreground text-background px-7 py-4 font-bold uppercase rounded-full hover:bg-primary transition leading-none btn-pulse-black">
-            <span className="h-2.5">Bring CIAO! to my kitchen</span>
+          <a href="#shop" className="inline-flex items-center justify-center mt-6 bg-foreground text-background px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-foreground hover:bg-primary hover:outline-primary transition leading-none btn-pulse-black">
+            <span className="leading-none">Bring CIAO! to my kitchen</span>
           </a>
         </div>
       </section>
@@ -256,8 +248,8 @@ export default function StorySection() {
                 CIAO! is made to be <strong>used, displayed and remembered.</strong>
               </p>
             </div>
-            <a href="#shop" className="relative z-10 inline-flex items-center justify-center mt-6 bg-background text-foreground px-7 py-4 font-bold uppercase rounded-full hover:bg-foreground hover:text-background transition self-start shadow-[0_8px_24px_rgba(0,0,0,0.35)] leading-none btn-pulse-white">
-              <span className="h-2.5">Choose CIAO! now</span>
+            <a href="#shop" className="relative z-10 inline-flex items-center justify-center mt-6 bg-background text-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-background hover:bg-foreground hover:text-background hover:outline-foreground transition self-start shadow-[0_8px_24px_rgba(0,0,0,0.35)] leading-none btn-pulse-white">
+              <span className="leading-none">Choose CIAO! now</span>
             </a>
           </div>
         </div>

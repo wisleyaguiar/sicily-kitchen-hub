@@ -41,8 +41,7 @@ export default function FaqSection() {
 
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <span className="text-sm font-bold uppercase tracking-[0.3em] text-primary">FAQ</span>
-          <h2 className="mt-3 text-4xl md:text-5xl uppercase">Questions, answered.</h2>
+          <h2 className="text-4xl md:text-5xl uppercase">Questions, answered.</h2>
         </div>
         <Accordion type="single" collapsible className="space-y-3">
           {faqItems.map(([q, a], index) => (

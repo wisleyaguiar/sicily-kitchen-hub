@@ -14,8 +14,8 @@ export default function Footer() {
             Real Sicilian extra virgin olive oil — premium, organic, zero blend, cold pressed.
             From the pan to the plate. From ordinary to unforgettable.
           </p>
-          <a href="#shop" className="inline-flex items-center justify-center mt-10 bg-background text-foreground px-9 py-5 font-bold uppercase tracking-wide rounded-full text-lg hover:bg-foreground hover:text-background transition shadow-2xl leading-none">
-            <span className="h-2.5">Shop CIAO! with 15% OFF</span>
+          <a href="#shop" className="inline-flex items-center justify-center mt-10 bg-background text-foreground px-9 py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full outline outline-2 outline-offset-2 outline-background hover:bg-foreground hover:text-background hover:outline-foreground transition shadow-2xl leading-none btn-pulse-white">
+            <span className="leading-none">Shop CIAO! with 15% OFF</span>
           </a>
         </div>
       </section>
