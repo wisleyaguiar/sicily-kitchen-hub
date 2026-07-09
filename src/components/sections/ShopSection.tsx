@@ -37,6 +37,16 @@ type Product = {
 };
 
 function ProductCard({ p }: { p: Product }) {
+  const handleProductClick = () => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "InitiateCheckout", {
+        content_name: p.title,
+        value: parseFloat(p.price.replace("$", "")),
+        currency: "USD",
+      });
+    }
+  };
+
   return (
     <article className="bg-background text-foreground rounded-3xl overflow-hidden border-4 border-background hover:border-primary transition group flex flex-col h-full">
       <div
@@ -80,6 +90,7 @@ function ProductCard({ p }: { p: Product }) {
           href={p.url}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleProductClick}
           className="mt-auto pt-4 w-full inline-flex items-center justify-center bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none btn-pulse-red"
         >
           Buy Now
