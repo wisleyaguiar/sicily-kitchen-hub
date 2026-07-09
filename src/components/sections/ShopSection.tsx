@@ -33,6 +33,7 @@ type Product = {
   price: string;
   objectClass?: string;
   aspectClass?: string;
+  url: string;
 };
 
 function ProductCard({ p }: { p: Product }) {
@@ -75,9 +76,14 @@ function ProductCard({ p }: { p: Product }) {
           {p.size}
         </p>
         <p className="text-sm text-muted-foreground mt-2">{p.desc}</p>
-        <button className="mt-auto pt-4 w-full inline-flex items-center justify-center bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none btn-pulse-red">
-          Add to cart
-        </button>
+        <a
+          href={p.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto pt-4 w-full inline-flex items-center justify-center bg-primary text-primary-foreground py-3 font-bold uppercase text-sm tracking-wide rounded-full hover:bg-[var(--brand-red-dark)] transition leading-none btn-pulse-red"
+        >
+          Buy Now
+        </a>
       </div>
     </article>
   );
@@ -94,6 +100,7 @@ export default function ShopSection() {
       price: "$37.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
       aspectClass: "aspect-[1600/1360]",
+      url: "https://www.ciao-sicily.com/products/ciao-kitchen-set-extra-virgin-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Finishing EVOO",
@@ -106,6 +113,7 @@ export default function ShopSection() {
       price: "$22.99",
       objectClass: "scale-100 group-hover:scale-105",
       aspectClass: "aspect-[360/306]",
+      url: "https://www.ciao-sicily.com/products/ciao-extra-virgin-olive-oil-500ml-finishing?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Cooking EVOO",
@@ -118,6 +126,7 @@ export default function ShopSection() {
       price: "$17.99",
       objectClass: "scale-100 group-hover:scale-105",
       aspectClass: "aspect-[360/306]",
+      url: "https://www.ciao-sicily.com/products/ciao-cooking-extra-virgin-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
   ];
   const infused100 = [
@@ -130,6 +139,7 @@ export default function ShopSection() {
       badgeIcon: iconTruffle,
       price: "$12.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-truffle-infused-olive-oil?variant=46985626583194&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Infused — Basil",
@@ -140,6 +150,7 @@ export default function ShopSection() {
       badgeIcon: iconBasil,
       price: "$12.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-basil-infused-olive-oil?variant=46986697834650&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Infused — Chili",
@@ -150,6 +161,7 @@ export default function ShopSection() {
       badgeIcon: iconChili,
       price: "$12.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-chili-infused-olive-oil?variant=46986663559322&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Infused — Rosemary",
@@ -160,6 +172,7 @@ export default function ShopSection() {
       badgeIcon: iconRosemary,
       price: "$12.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-rosemary-infused-olive-oil?variant=46986701471898&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
   ];
   const infused250 = [
@@ -172,6 +185,7 @@ export default function ShopSection() {
       badgeIcon: iconTruffle,
       price: "$19.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-truffle-infused-olive-oil?variant=46985626615962&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Infused — Basil",
@@ -182,6 +196,7 @@ export default function ShopSection() {
       badgeIcon: iconBasil,
       price: "$19.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-basil-infused-olive-oil?variant=46986697867418&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Infused — Chili",
@@ -192,6 +207,7 @@ export default function ShopSection() {
       badgeIcon: iconChili,
       price: "$19.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-chili-infused-olive-oil?variant=46986663592090&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
     {
       title: "Infused — Rosemary",
@@ -202,6 +218,7 @@ export default function ShopSection() {
       badgeIcon: iconRosemary,
       price: "$19.99",
       objectClass: "scale-110 group-hover:scale-[1.18]",
+      url: "https://www.ciao-sicily.com/products/ciao-rosemary-infused-olive-oil?variant=46986701504666&utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-shop-cards",
     },
   ];
 
