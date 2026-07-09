@@ -47,6 +47,7 @@ ciao-sicily-kitchen/
 ## 🎨 Design System & Styling
 
 The design is custom-built to reflect a rustic yet high-end, premium food brand:
+
 - **Color Space:** Utilizes **OKLCH** color codes in [styles.css](file:///Users/wisleyaguiar/Projetos/ciao-sicily-kitchen/src/styles.css) (Cream background, Charcoal foreground, Vibrant Red primary, Fresh Green secondary).
 - **Rustic Accents:** Contains `.checker-band` conic Napolitano napkin patterns and `.ciao-script` brush text signatures rotated at `-3deg`.
 - **Micro-Animations:** Includes slow floating seals (`animate-float`) and smooth olive oil drizzle keyframes.
@@ -82,6 +83,7 @@ Run the Vite development server locally:
 ```bash
 npm run dev
 ```
+
 By default, the server runs on [http://localhost:8080](http://localhost:8080).
 
 ### Build
@@ -101,11 +103,13 @@ This compiles client-side assets to `.output/public` and SSR server modules to `
 The project is configured for server-side rendering (SSR) on Netlify using the `netlify.toml` file in the root.
 
 ### Method 1: Continuous Integration (Git-based - Recommended)
+
 1. Push this project to a GitHub repository.
 2. Link the repository to your Netlify account via the Netlify dashboard.
 3. Netlify will auto-detect the configuration and env settings from `netlify.toml` and build the application dynamically on every commit.
 
 ### Method 2: Manual Deploy (Local CLI)
+
 1. Build the project using the Netlify preset:
    ```bash
    NITRO_PRESET=netlify npm run build
@@ -114,4 +118,4 @@ The project is configured for server-side rendering (SSR) on Netlify using the `
    ```bash
    netlify deploy --prod
    ```
-   *(Ensure you run `netlify init` or `netlify link` on the directory first to associate it with your Netlify project.)*
+   _(Ensure you run `netlify init` or `netlify link` on the directory first to associate it with your Netlify project.)_

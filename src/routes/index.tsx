@@ -13,9 +13,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "CIAO! — Real Sicilian Extra Virgin Olive Oil" },
-      { name: "description", content: "Premium organic Sicilian EVOO — zero blend, cold pressed. From the pan to the plate. Get 15% OFF your first order." },
+      {
+        name: "description",
+        content:
+          "Premium organic Sicilian EVOO — zero blend, cold pressed. From the pan to the plate. Get 15% OFF your first order.",
+      },
       { property: "og:title", content: "CIAO! — Real Sicilian Extra Virgin Olive Oil" },
-      { property: "og:description", content: "Premium organic Sicilian EVOO — zero blend, cold pressed. Get 15% OFF your first order." },
+      {
+        property: "og:description",
+        content:
+          "Premium organic Sicilian EVOO — zero blend, cold pressed. Get 15% OFF your first order.",
+      },
       { property: "og:image", content: finishing },
       { property: "og:type", content: "website" },
     ],

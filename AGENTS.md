@@ -38,7 +38,7 @@ This document serves as the source of truth and development conventions for any 
 - **Color Format:** All brand colors are strictly declared in the **OKLCH** color space (e.g. `oklch(0.58 0.22 27)`). Ensure any new colors added to the theme follow the OKLCH specification for consistent rendering.
 - **Brand Patterns:**
   - **Checker Bands:** Use `.checker-band` for diagonal Italian conic patterns.
-  - **Signature Text:** Use `.ciao-script` (which uses the *Permanent Marker* font family rotated at `-3deg`) to render handwriting elements.
+  - **Signature Text:** Use `.ciao-script` (which uses the _Permanent Marker_ font family rotated at `-3deg`) to render handwriting elements.
 
 ---
 
@@ -60,6 +60,7 @@ This document serves as the source of truth and development conventions for any 
 ## 6. How to Build & Verify
 
 Before submitting any code changes, verify correctness:
+
 1. Run local dev server to check runtime:
    ```bash
    npm run dev
@@ -90,27 +91,29 @@ Whenever browser-based verification is required, always use the Playwright MCP t
 3. Open the target page using Playwright MCP and wait until the page reaches a stable state before inspecting it.
 4. Check for:
 
-   * visible layout and responsive behavior;
-   * JavaScript runtime errors;
-   * failed network requests;
-   * broken images or missing assets;
-   * incorrect spacing, alignment, overflow, or overlapping elements;
-   * accessibility issues that are visible or reported by the browser;
-   * differences between the implementation and the provided design or requirements.
+   - visible layout and responsive behavior;
+   - JavaScript runtime errors;
+   - failed network requests;
+   - broken images or missing assets;
+   - incorrect spacing, alignment, overflow, or overlapping elements;
+   - accessibility issues that are visible or reported by the browser;
+   - differences between the implementation and the provided design or requirements.
+
 5. Test the relevant viewport sizes when the task affects responsive behavior.
 6. Capture screenshots whenever visual validation is relevant.
 7. Do not claim that a page was visually verified unless the page was successfully opened and inspected through Playwright MCP.
 8. If the browser context fails to initialize, do not repeatedly retry the same command without investigation. First:
 
-   * confirm that the server is reachable at `127.0.0.1`;
-   * confirm that the expected port is correct;
-   * check whether the Playwright browser or CDP connection is available;
-   * retry once after correcting the detected issue.
+   - confirm that the server is reachable at `127.0.0.1`;
+   - confirm that the expected port is correct;
+   - check whether the Playwright browser or CDP connection is available;
+   - retry once after correcting the detected issue.
+
 9. If Playwright MCP remains unavailable, clearly report the exact error and state that browser verification could not be completed. Do not fabricate screenshots, visual findings, or successful validation.
 10. After completing browser verification, provide a concise report containing:
 
-    * the URL and viewport tested;
-    * the checks performed;
-    * any issues found;
-    * any fixes applied;
-    * whether the final verification passed.
+    - the URL and viewport tested;
+    - the checks performed;
+    - any issues found;
+    - any fixes applied;
+    - whether the final verification passed.

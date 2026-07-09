@@ -7,13 +7,28 @@ import {
 
 export default function FaqSection() {
   const faqItems = [
-    ["Is CIAO! really Sicilian?", "Yes. CIAO! works with olive oils of Sicilian origin, connected to the tradition, soil and food culture of Sicily."],
-    ["Is CIAO! organic?", "Yes. CIAO! has European organic certification, aligned with USDA standards."],
+    [
+      "Is CIAO! really Sicilian?",
+      "Yes. CIAO! works with olive oils of Sicilian origin, connected to the tradition, soil and food culture of Sicily.",
+    ],
+    [
+      "Is CIAO! organic?",
+      "Yes. CIAO! has European organic certification, aligned with USDA standards.",
+    ],
     ["Is CIAO! Kosher certified?", "Yes. CIAO! is Kosher certified."],
     ["Does CIAO! use blends?", "No. We deliver real extra virgin olive oil with zero blend."],
-    ["What is the difference between Cooking and Finishing?", "Cooking is for preparing food every day. Finishing is the final touch of flavor after the dish is ready."],
-    ["What should I buy first?", "The Kitchen Set with Cooking + Finishing — one for the pan, one for the plate."],
-    ["What foods can I use CIAO! on?", "Pasta, pizza, salads, bread, eggs, vegetables, bowls, soups, meat and fish."],
+    [
+      "What is the difference between Cooking and Finishing?",
+      "Cooking is for preparing food every day. Finishing is the final touch of flavor after the dish is ready.",
+    ],
+    [
+      "What should I buy first?",
+      "The Kitchen Set with Cooking + Finishing — one for the pan, one for the plate.",
+    ],
+    [
+      "What foods can I use CIAO! on?",
+      "Pasta, pizza, salads, bread, eggs, vegetables, bowls, soups, meat and fish.",
+    ],
     ["Free shipping?", "Yes — on orders over $19.99 through the website."],
     ["First-order offer?", "Yes — 15% welcome discount per the active campaign."],
   ];
@@ -27,12 +42,12 @@ export default function FaqSection() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": faqItems.map(([q, a]) => ({
+            mainEntity: faqItems.map(([q, a]) => ({
               "@type": "Question",
-              "name": q,
-              "acceptedAnswer": {
+              name: q,
+              acceptedAnswer: {
                 "@type": "Answer",
-                "text": a,
+                text: a,
               },
             })),
           }),

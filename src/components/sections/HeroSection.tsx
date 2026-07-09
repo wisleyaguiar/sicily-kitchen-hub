@@ -7,34 +7,53 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-12 items-center">
         <div>
           <h1 className="text-5xl md:text-7xl leading-[0.95] uppercase text-primary">
-            New Cooking<br/>
-            AND Finishing<br/>
+            New Cooking
+            <br />
+            AND Finishing
+            <br />
             Kit
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl">
-            Two bottles. One mission: make every meal taste like Italy. Premium, organic,
-            zero blend, cold pressed Sicilian EVOO — one to cook, one to finish.
+            Two bottles. One mission: make every meal taste like Italy. Premium, organic, zero
+            blend, cold pressed Sicilian EVOO — one to cook, one to finish.
           </p>
           <p className="mt-4 ciao-script text-3xl text-secondary tracking-wide">
-            From the pan to the plate.<br/>
+            From the pan to the plate.
+            <br />
             From ordinary to <em className="not-italic text-primary">unforgettable.</em>
           </p>
           <div className="mt-8 flex flex-wrap gap-3 items-center">
-            <a href="#shop" className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full shadow-[var(--shadow-bold)] outline outline-2 outline-offset-2 outline-primary hover:scale-[1.03] transition leading-none btn-pulse-red">
+            <a
+              href="#shop"
+              className="inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-bold uppercase tracking-wider rounded-full shadow-[var(--shadow-bold)] outline outline-2 outline-offset-2 outline-primary hover:scale-[1.03] transition leading-none btn-pulse-red"
+            >
               <span className="leading-none">Get the Kit — 15% OFF</span>
             </a>
-            <a href="#why" className="inline-flex items-center justify-center border-2 border-foreground px-8 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none">
+            <a
+              href="#why"
+              className="inline-flex items-center justify-center border-2 border-foreground px-8 py-4 font-bold uppercase tracking-wide rounded-full hover:bg-foreground hover:text-background transition leading-none"
+            >
               <span className="leading-none">Watch the story</span>
             </a>
           </div>
           <ul className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-sm font-medium font-[var(--font-mono)]">
-            {["15% OFF first order","Organic","Zero blend","Cold pressed","Sicilian origin","Kosher certified"].map(x=>(
+            {[
+              "15% OFF first order",
+              "Organic",
+              "Zero blend",
+              "Cold pressed",
+              "Sicilian origin",
+              "Kosher certified",
+            ].map((x) => (
               <li key={x} className="flex items-center gap-2">
-                <span className="text-secondary font-black">✓</span>{x}
+                <span className="text-secondary font-black">✓</span>
+                {x}
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">Free shipping over $19.99</p>
+          <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">
+            Free shipping over $19.99
+          </p>
         </div>
 
         <div className="relative">
@@ -48,8 +67,12 @@ export default function HeroSection() {
           {/* Green circular badge — clean on-brand circle, centered text */}
           <div className="absolute -top-6 -right-4 md:-top-8 md:-right-8 z-10 w-28 h-28 md:w-36 md:h-36 rounded-full bg-secondary text-secondary-foreground border-4 border-foreground flex flex-col items-center justify-center text-center shadow-[var(--shadow-bold)]">
             <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-90">save</span>
-            <span className="font-display text-3xl md:text-5xl tracking-tight mt-0.5 leading-none">15%</span>
-            <span className="font-display text-xs md:text-sm tracking-[0.2em] mt-0.5 leading-none">OFF</span>
+            <span className="font-display text-3xl md:text-5xl tracking-tight mt-0.5 leading-none">
+              15%
+            </span>
+            <span className="font-display text-xs md:text-sm tracking-[0.2em] mt-0.5 leading-none">
+              OFF
+            </span>
           </div>
         </div>
       </div>

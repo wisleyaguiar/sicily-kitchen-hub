@@ -78,17 +78,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lovable App" },
-      { name: "description", content: "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing." },
+      {
+        name: "description",
+        content:
+          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing." },
+      {
+        property: "og:description",
+        content:
+          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5de944-bddd-47a6-a6a1-6090061913c3/id-preview-11ceeed5--8cf40cde-114a-4062-acad-e1f0f8c92bbb.lovable.app-1781527553356.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5de944-bddd-47a6-a6a1-6090061913c3/id-preview-11ceeed5--8cf40cde-114a-4062-acad-e1f0f8c92bbb.lovable.app-1781527553356.png" },
+      {
+        name: "twitter:description",
+        content:
+          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5de944-bddd-47a6-a6a1-6090061913c3/id-preview-11ceeed5--8cf40cde-114a-4062-acad-e1f0f8c92bbb.lovable.app-1781527553356.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5de944-bddd-47a6-a6a1-6090061913c3/id-preview-11ceeed5--8cf40cde-114a-4062-acad-e1f0f8c92bbb.lovable.app-1781527553356.png",
+      },
     ],
     links: [
       {
