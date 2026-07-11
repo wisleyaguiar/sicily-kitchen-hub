@@ -1,4 +1,5 @@
 import kitchenSet from "@/assets/kitchen-set.png";
+import certificationsImg from "@/assets/CERTIFICATIONS.png";
 
 export default function HeroSection() {
   return (
@@ -51,9 +52,14 @@ export default function HeroSection() {
               </li>
             ))}
           </ul>
-          <p className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">
-            Free shipping over $19.99
+          <p className="mt-4 text-xs uppercase tracking-widest text-muted-foreground font-semibold">
+            CERTIFICATIONS
           </p>
+          <img
+            src={certificationsImg}
+            alt="Certifications"
+            className="mt-3 w-full h-auto object-contain block"
+          />
         </div>
 
         <div className="relative">

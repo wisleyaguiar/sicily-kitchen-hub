@@ -3,6 +3,10 @@ import finishingExploded from "@/assets/500_FINISHING_AF_BG_ZERO.png";
 import pastaTable from "@/assets/ciao-pasta-table.jpg";
 import saladLandscape from "@/assets/ciao-salad-landscape.jpg";
 import sicilyEtna from "@/assets/sicily-etna.png";
+import stamp01 from "@/assets/STAMPS_01.png";
+import stamp02 from "@/assets/STAMPS_02.png";
+import stamp03 from "@/assets/STAMPS_03.png";
+import stamp04 from "@/assets/STAMPS_04.png";
 
 export default function StorySection() {
   return (
@@ -11,6 +15,29 @@ export default function StorySection() {
       <section className="py-12 px-5 bg-background">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.05fr] gap-6 md:gap-8 items-center">
           <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[540px]">
+            {/* Stamps on the left */}
+            <div className="absolute left-0 md:left-4 lg:left-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 md:gap-4 z-20">
+              <img
+                src={stamp01}
+                alt="100% Organic"
+                className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
+              />
+              <img
+                src={stamp02}
+                alt="Non Blended Guarantee"
+                className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
+              />
+              <img
+                src={stamp03}
+                alt="Real Ingredients"
+                className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
+              />
+              <img
+                src={stamp04}
+                alt="Vegan Friendly"
+                className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
+              />
+            </div>
             {/* Exploded product in the foreground */}
             <img
               src={finishingExploded}
