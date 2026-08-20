@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#DE121C" />
+  <circle cx="50" cy="50" r="42" fill="#F3F1E3" stroke="#219C3A" stroke-width="4" />
+  <text x="50" y="58" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="24" fill="#DE121C" text-anchor="middle" letter-spacing="-1">CIAO!</text>
+</svg>
