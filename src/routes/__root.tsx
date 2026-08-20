@@ -77,37 +77,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
+      { title: "CIAO! Sicily — Real Sicilian Extra Virgin Olive Oil" },
       {
         name: "description",
         content:
-          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing.",
+          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing. 100% organic, cold pressed, zero blend.",
       },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
+      { name: "author", content: "CIAO! Sicily" },
+      { property: "og:site_name", content: "CIAO! Sicily" },
+      { property: "og:title", content: "CIAO! Sicily — Real Sicilian Extra Virgin Olive Oil" },
       {
         property: "og:description",
         content:
-          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing.",
+          "Premium organic Sicilian EVOO — zero blend, cold pressed. From the pan to the plate. Get 15% OFF your first order.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CIAO! Sicily — Real Sicilian Extra Virgin Olive Oil" },
       {
         name: "twitter:description",
         content:
-          "CIAO! Sicily offers premium Sicilian extra virgin olive oil for cooking and finishing.",
-      },
-      {
-        property: "og:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5de944-bddd-47a6-a6a1-6090061913c3/id-preview-11ceeed5--8cf40cde-114a-4062-acad-e1f0f8c92bbb.lovable.app-1781527553356.png",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c5de944-bddd-47a6-a6a1-6090061913c3/id-preview-11ceeed5--8cf40cde-114a-4062-acad-e1f0f8c92bbb.lovable.app-1781527553356.png",
+          "Premium organic Sicilian EVOO — zero blend, cold pressed. From the pan to the plate. Get 15% OFF your first order.",
       },
     ],
     links: [

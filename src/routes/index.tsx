@@ -26,8 +26,44 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:image", content: finishing },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "CIAO! Sicily" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "CIAO! — Real Sicilian Extra Virgin Olive Oil" },
+      {
+        name: "twitter:description",
+        content:
+          "Premium organic Sicilian EVOO — zero blend, cold pressed. Get 15% OFF your first order.",
+      },
+      { name: "twitter:image", content: finishing },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://ciaosicily.com/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://ciaosicily.com/#organization",
+              name: "CIAO! Sicily",
+              url: "https://ciaosicily.com",
+              logo: "https://ciaosicily.com/favicon.ico",
+              description: "Premium Sicilian Extra Virgin Olive Oil for cooking and finishing.",
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://ciaosicily.com/#website",
+              url: "https://ciaosicily.com",
+              name: "CIAO! Sicily",
+              publisher: {
+                "@id": "https://ciaosicily.com/#organization",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
