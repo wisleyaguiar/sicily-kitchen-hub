@@ -1,5 +1,83 @@
 import ciaoLogo from "@/assets/ciao-logo.png";
 
+const footerSections = [
+  {
+    title: "Shop",
+    links: [
+      {
+        label: "Kitchen Set",
+        href: "https://www.ciao-sicily.com/products/ciao-kitchen-set-extra-virgin-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+      {
+        label: "Finishing EVOO",
+        href: "https://www.ciao-sicily.com/products/ciao-extra-virgin-olive-oil-500ml-finishing?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+      {
+        label: "Cooking EVOO",
+        href: "https://www.ciao-sicily.com/products/ciao-cooking-extra-virgin-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+      {
+        label: "Truffle Infused",
+        href: "https://www.ciao-sicily.com/products/ciao-truffle-infused-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+      {
+        label: "Basil Infused",
+        href: "https://www.ciao-sicily.com/products/ciao-basil-infused-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+      {
+        label: "Chili Infused",
+        href: "https://www.ciao-sicily.com/products/ciao-chili-infused-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+      {
+        label: "Rosemary Infused",
+        href: "https://www.ciao-sicily.com/products/ciao-rosemary-infused-olive-oil?utm_source=lp-ciao-sicily-kitchen&utm_medium=referral&utm_campaign=lp-footer",
+      },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      {
+        label: "Shipping Policy",
+        href: "https://www.ciao-sicily.com/policies/terms-of-service",
+      },
+      {
+        label: "Privacy Policy",
+        href: "https://www.ciao-sicily.com/policies/privacy-policy",
+      },
+      {
+        label: "Terms of Service",
+        href: "https://www.ciao-sicily.com/policies/terms-of-service",
+      },
+      {
+        label: "Contact",
+        href: "https://www.ciao-sicily.com/pages/contact",
+      },
+    ],
+  },
+  {
+    title: "Follow",
+    links: [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/getciaonow/?igsh=MXJpNXl3dDJwcDFuMQ%3D%3D#",
+      },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/people/Getciaonow/61577114289317/",
+      },
+      {
+        label: "TikTok",
+        href: "https://www.tiktok.com/@getciaonow",
+      },
+      {
+        label: "Pinterest",
+        href: "https://br.pinterest.com/getciaonow",
+      },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <>
@@ -44,32 +122,31 @@ export default function Footer() {
               Real Sicilian Extra Virgin Olive Oil. Bringing taste and joy to your food.
             </p>
             <p className="mt-4 text-xs uppercase tracking-widest text-background/50">
-              www.ciao-sicily.com
+              <a
+                href="https://www.ciao-sicily.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                www.ciao-sicily.com
+              </a>
             </p>
           </div>
-          {[
-            [
-              "Shop",
-              [
-                "Extra Virgin Olive Oil",
-                "Cooking Olive Oil",
-                "Finishing Olive Oil",
-                "Infused Oils",
-                "Gift Pack",
-              ],
-            ],
-            ["Support", ["Shipping Policy", "Privacy Policy", "Terms of Service", "Contact"]],
-            ["Follow", ["Instagram", "Facebook", "TikTok", "Pinterest"]],
-          ].map(([title, items]) => (
-            <div key={title as string}>
+          {footerSections.map((section) => (
+            <div key={section.title}>
               <h4 className="text-sm font-bold uppercase tracking-widest text-secondary">
-                {title}
+                {section.title}
               </h4>
               <ul className="mt-4 space-y-2 text-sm text-background/80">
-                {(items as string[]).map((i) => (
-                  <li key={i}>
-                    <a href="#" className="hover:text-primary">
-                      {i}
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-primary transition-colors"
+                    >
+                      {link.label}
                     </a>
                   </li>
                 ))}
