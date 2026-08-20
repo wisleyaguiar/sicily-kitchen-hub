@@ -116,22 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
     ],
-    scripts: [
-      {
-        children: `
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1627565421700338');
-          fbq('track', 'PageView');
-        `,
-      },
-    ],
+    scripts: [],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -144,15 +129,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
-        <noscript suppressHydrationWarning>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1627565421700338&ev=PageView&noscript=1"
-            suppressHydrationWarning
-          />
-        </noscript>
       </head>
       <body suppressHydrationWarning>
         {children}
@@ -164,6 +140,36 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    // Non-blocking deferred loading of Facebook Pixel
+    const loadPixel = () => {
+      if ((window as any).fbq) return;
+      const fbq: any = function () {
+        fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+      };
+      if (!(window as any)._fbq) (window as any)._fbq = fbq;
+      fbq.push = fbq;
+      fbq.loaded = true;
+      fbq.version = "2.0";
+      fbq.queue = [];
+      (window as any).fbq = fbq;
+
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://connect.facebook.net/en_US/fbevents.js";
+      document.head.appendChild(script);
+
+      fbq("init", "1627565421700338");
+      fbq("track", "PageView");
+    };
+
+    if ("requestIdleCallback" in window) {
+      (window as any).requestIdleCallback(loadPixel, { timeout: 2000 });
+    } else {
+      setTimeout(loadPixel, 1000);
+    }
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
