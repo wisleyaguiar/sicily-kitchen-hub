@@ -72,14 +72,13 @@ Before submitting any code changes, verify correctness:
 
 ---
 
-## 7. Netlify Deployment Conventions
+## 7. Deploy para Produção (GitHub & Coolify)
 
-- **Vite Config:** Nitro packaging must be enabled by setting `nitro: true` in [vite.config.ts](file:///Users/wisleyaguiar/Projetos/ciao-sicily-kitchen/vite.config.ts). This is required for server function compilation and routing.
-- **Build Target:** For local builds intended for Netlify deployment, prefix the build with `NITRO_PRESET=netlify` to output files to `.netlify/functions-internal` (server function) and `dist` (client/static public assets).
-- **Deploy Command:** Deploy changes locally using the Netlify CLI:
+- **Fluxo de Deploy:** O deploy para produção é acionado automaticamente através de `git push` para a branch `main` no GitHub.
+- **Build no Coolify:** O Coolify monitora a branch `main` e executa o processo de build e publicação da aplicação de forma automatizada ao detectar novos commits.
+- **Verificação Pré-Push:** Antes de enviar para a `main`, sempre execute a compilação local para garantir que tipos e bundle passem sem erros:
   ```bash
-  NITRO_PRESET=netlify npm run build
-  netlify deploy --prod
+  npm run build
   ```
 
 ## Browser Verification with Playwright MCP
