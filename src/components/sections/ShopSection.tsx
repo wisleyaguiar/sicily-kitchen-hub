@@ -56,6 +56,8 @@ function ProductCard({ p }: { p: Product }) {
           <img
             src={p.badgeIcon}
             alt={p.badge}
+            loading="lazy"
+            decoding="async"
             className={`absolute z-20 drop-shadow-md pointer-events-none ${
               p.badgeIconWide
                 ? "top-3 left-3 w-28 md:w-36 h-auto object-contain"
@@ -74,6 +76,8 @@ function ProductCard({ p }: { p: Product }) {
         <img
           src={p.img}
           alt={p.title}
+          loading="lazy"
+          decoding="async"
           className={`h-full w-full object-contain p-2 transition ${p.objectClass ?? "scale-125 group-hover:scale-[1.35]"}`}
         />
       </div>

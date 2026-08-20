@@ -58,6 +58,10 @@ export default function HeroSection() {
           <img
             src={certificationsImg}
             alt="Certifications"
+            loading="eager"
+            decoding="async"
+            width={500}
+            height={60}
             className="mt-3 w-full h-auto object-contain block"
           />
         </div>
@@ -67,6 +71,11 @@ export default function HeroSection() {
           <img
             src={kitchenSet}
             alt="CIAO! Kitchen Set — Cooking and Finishing Extra Virgin Olive Oil on the table"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            width={1200}
+            height={900}
             className="w-full aspect-[4/3] md:aspect-[4/5] object-cover block rounded-3xl shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
           />
 

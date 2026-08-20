@@ -31,6 +31,8 @@ export default function ProductDetailsSection() {
                 <img
                   src={ciaoCooking}
                   alt="CIAO! Cooking — yellow squeeze bottle in a kitchen scene"
+                  loading="lazy"
+                  decoding="async"
                   className="h-80 w-full object-cover object-center rounded-2xl"
                 />
               </div>
@@ -47,6 +49,8 @@ export default function ProductDetailsSection() {
                 <img
                   src={finishingTable}
                   alt="CIAO! Finishing — green squeeze bottle on a Sicilian table with burrata, bread, pasta and pizza"
+                  loading="lazy"
+                  decoding="async"
                   className="h-80 w-full object-cover rounded-2xl"
                   style={{ objectPosition: "0 -102px" }}
                 />
@@ -81,6 +85,8 @@ export default function ProductDetailsSection() {
                 <img
                   src={kitchenSet}
                   alt="CIAO! Kitchen Set — Cooking and Finishing bottles together"
+                  loading="lazy"
+                  decoding="async"
                   className="relative z-10 max-h-[110%] w-auto object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.22)] hover:scale-[1.05] transition duration-500"
                 />
               </div>
@@ -143,11 +149,15 @@ export default function ProductDetailsSection() {
                     <img
                       src={p.icon}
                       alt=""
+                      loading="lazy"
+                      decoding="async"
                       className="absolute top-2 left-2 w-8 h-8 md:w-10 md:h-10 object-contain z-10 drop-shadow-md pointer-events-none"
                     />
                     <img
                       src={p.img}
                       alt={`${p.name} infused EVOO`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -164,6 +174,8 @@ export default function ProductDetailsSection() {
               <img
                 src={ciaoPackshot}
                 alt="CIAO! Infused Oils Gift Pack — Truffle, Chili, Rosemary and Basil set"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-3xl border-4 border-foreground shadow-[var(--shadow-card)] hover:scale-[1.02] transition duration-500"
               />
             </div>

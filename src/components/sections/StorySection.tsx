@@ -20,21 +20,37 @@ export default function StorySection() {
               <img
                 src={stamp01}
                 alt="100% Organic"
+                loading="lazy"
+                decoding="async"
+                width={80}
+                height={80}
                 className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
               />
               <img
                 src={stamp02}
                 alt="Non Blended Guarantee"
+                loading="lazy"
+                decoding="async"
+                width={80}
+                height={80}
                 className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
               />
               <img
                 src={stamp03}
                 alt="Real Ingredients"
+                loading="lazy"
+                decoding="async"
+                width={80}
+                height={80}
                 className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
               />
               <img
                 src={stamp04}
                 alt="Vegan Friendly"
+                loading="lazy"
+                decoding="async"
+                width={80}
+                height={80}
                 className="w-14 h-14 md:w-20 md:h-20 flex-shrink-0 object-contain hover:scale-[1.05] transition duration-300"
               />
             </div>
@@ -42,6 +58,8 @@ export default function StorySection() {
             <img
               src={finishingExploded}
               alt="CIAO! Sicilian EVOO bottle — 500ml Finishing Extra Virgin Olive Oil"
+              loading="lazy"
+              decoding="async"
               className="relative z-10 w-auto h-[380px] md:h-[520px] object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.18)] hover:scale-[1.03] transition duration-500"
             />
           </div>
@@ -95,6 +113,8 @@ export default function StorySection() {
           <img
             src={sicilyEtna}
             alt=""
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover brightness-[0.25] sepia-[0.15] saturate-[1.1] contrast-[1.05]"
           />
           <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
@@ -230,6 +250,8 @@ export default function StorySection() {
             <img
               src={pastaTable}
               alt="CIAO! Extra Virgin Olive Oil bottle with fresh pasta, basil, eggs and tomatoes on a kitchen table"
+              loading="lazy"
+              decoding="async"
               className="max-h-[560px] md:max-h-[640px] w-auto object-cover rounded-2xl drop-shadow-[0_30px_50px_rgba(0,0,0,0.4)]"
             />
           </div>
@@ -375,6 +397,8 @@ export default function StorySection() {
             <img
               src={saladLandscape}
               alt="CIAO! Extra Virgin Olive Oil bottle beside a fresh Sicilian salad with a sunlit countryside backdrop"
+              loading="lazy"
+              decoding="async"
               className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover"
               aria-hidden
             />
